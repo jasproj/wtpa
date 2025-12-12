@@ -21,14 +21,15 @@
     
     <style>
         :root {
-            --deep-ocean: #0a1628;
-            --ocean: #1a5f7a;
-            --teal: #2d8f9e;
-            --sand: #f5e6d3;
-            --gold: #d4a84b;
-            --coral: #e07a5f;
+            --deep-ocean: #0d2137;
+            --ocean: #1a6b7c;
+            --teal: #2a9d8f;
+            --seafoam: #40b4a6;
+            --sand: #f4ede4;
+            --gold: #e9b44c;
+            --sunset: #d68c45;
             --white: #ffffff;
-            --light-gray: #f8f9fa;
+            --light-gray: #f7f5f2;
         }
         
         * {
@@ -119,9 +120,9 @@
             height: 100%;
             background: linear-gradient(
                 to bottom,
-                rgba(10, 22, 40, 0.4) 0%,
-                rgba(10, 22, 40, 0.2) 50%,
-                rgba(10, 22, 40, 0.6) 100%
+                rgba(13, 33, 55, 0.35) 0%,
+                rgba(26, 107, 124, 0.15) 50%,
+                rgba(13, 33, 55, 0.55) 100%
             );
             z-index: 2;
         }
@@ -252,7 +253,7 @@
         
         /* Captain Story Section */
         .story-section {
-            background: var(--light-gray);
+            background: linear-gradient(180deg, var(--light-gray) 0%, var(--sand) 100%);
         }
         
         .story-container {
@@ -418,7 +419,7 @@
         
         /* YouTube Section */
         .youtube-section {
-            background: var(--deep-ocean);
+            background: linear-gradient(135deg, var(--deep-ocean) 0%, #0a2d3d 100%);
             color: var(--white);
             text-align: center;
         }
@@ -629,7 +630,7 @@
             grid-column: 1 / -1;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            background: linear-gradient(135deg, var(--deep-ocean) 0%, var(--ocean) 100%);
+            background: linear-gradient(135deg, var(--deep-ocean) 0%, var(--ocean) 60%, var(--teal) 100%);
             color: var(--white);
         }
         
@@ -702,7 +703,7 @@
         
         /* Reviews Section */
         .reviews-section {
-            background: var(--sand);
+            background: linear-gradient(180deg, var(--sand) 0%, #efe6da 100%);
         }
         
         .reviews-grid {
@@ -745,7 +746,7 @@
         
         /* Drop Us a Line Section */
         .contact-section {
-            background: linear-gradient(135deg, var(--ocean) 0%, var(--teal) 100%);
+            background: linear-gradient(135deg, var(--ocean) 0%, var(--teal) 50%, var(--seafoam) 100%);
             color: var(--white);
             position: relative;
             overflow: hidden;
@@ -878,7 +879,7 @@
         
         /* Newsletter Section */
         .newsletter-section {
-            background: var(--deep-ocean);
+            background: linear-gradient(180deg, var(--deep-ocean) 0%, #081520 100%);
             color: var(--white);
             text-align: center;
         }
