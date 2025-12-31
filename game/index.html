@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <title>Captain Dane's Deep Six | Walk The Plank Adventures</title>
     <meta name="description" content="Dive for treasure, battle sharks, and explore 5 legendary locations with Captain Dane. A free underwater adventure game from Walk The Plank Adventures." />
     <meta name="keywords" content="Key West tours, underwater game, treasure hunting, Captain Dane, Walk The Plank Adventures" />
@@ -65,7 +67,23 @@
       #game-container {
         display: flex;
         justify-content: center;
-        padding: 20px;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+      }
+      #game-container canvas {
+        max-width: 100%;
+        height: auto !important;
+        display: block;
+      }
+      @media (max-width: 768px) {
+        #game-container {
+          padding: 0;
+        }
+        .game-footer {
+          padding: 10px;
+        }
       }
       .game-footer {
         text-align: center;
