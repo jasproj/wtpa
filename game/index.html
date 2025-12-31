@@ -59,93 +59,31 @@
         bottom: 0;
       }
 
-      /* Ensure canvas scales properly */
+      /* Force canvas to fit viewport */
       #game-container canvas {
-        max-width: 100vw !important;
-        max-height: 100vh !important;
-        width: auto !important;
-        height: auto !important;
-        -o-object-fit: contain;
-           object-fit: contain;
-        /* Crisp pixel rendering for pixel art */
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) scale(0.35) !important;
+        transform-origin: center center !important;
         image-rendering: pixelated;
         image-rendering: crisp-edges;
-        /* Ensure canvas is centered */
-        display: block;
-        margin: auto;
-        transform-origin: center center;
       }
       
-      /* Force canvas to fit on mobile landscape */
-      @media screen and (max-width: 1200px) {
+      @media screen and (min-width: 1024px) {
         #game-container canvas {
-          transform: scale(0.5);
-          transform-origin: center center;
+          transform: translate(-50%, -50%) scale(0.7) !important;
         }
       }
       
-      @media screen and (max-width: 900px) {
+      @media screen and (min-width: 1300px) {
         #game-container canvas {
-          transform: scale(0.4);
-        }
-      }
-      
-      @media screen and (max-width: 700px) {
-        #game-container canvas {
-          transform: scale(0.3);
+          transform: translate(-50%, -50%) scale(1) !important;
         }
       }
 
-      /* Mobile touch action prevention */
       canvas {
         touch-action: none;
-      }
-      
-      /* Landscape mode recommendation for mobile */
-      @media screen and (max-width: 768px) and (orientation: portrait) {
-        #rotate-device-message {
-          display: flex !important;
-        }
-      }
-      
-      #rotate-device-message {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(10, 22, 40, 0.95);
-        z-index: 9999;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding: 20px;
-      }
-      
-      #rotate-device-message .icon {
-        font-size: 64px;
-        margin-bottom: 20px;
-        animation: rotate-hint 2s ease-in-out infinite;
-      }
-      
-      @keyframes rotate-hint {
-        0%, 100% { transform: rotate(0deg); }
-        25% { transform: rotate(-15deg); }
-        75% { transform: rotate(15deg); }
-      }
-      
-      #rotate-device-message h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-      
-      #rotate-device-message p {
-        font-size: 16px;
-        opacity: 0.8;
       }
     </style>
     <script type="module" crossorigin src="./assets/index-j8O9LhNO.js"></script>
@@ -153,12 +91,5 @@
   </head>
   <body>
     <div id="game-container"></div>
-    
-    <!-- Rotate device message for portrait mobile -->
-    <div id="rotate-device-message">
-      <div class="icon">📱↻</div>
-      <h2>Rotate Your Device</h2>
-      <p>Captain Dane's Deep Six plays best in landscape mode</p>
-    </div>
   </body>
 </html>
