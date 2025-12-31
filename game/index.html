@@ -9,14 +9,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <title>Captain Dane's Deep Six | Walk The Plank Adventures</title>
-    <meta name="description" content="Dive for treasure, battle sharks, and explore 5 legendary locations with Captain Dane. A free underwater adventure game from Walk The Plank Adventures." />
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Captain Dane's Deep Six | Walk The Plank Adventures" />
-    <meta property="og:description" content="Dive for treasure, battle sharks, and explore 5 legendary locations. Free underwater adventure game!" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://walktheplankadventures.com/game/" />
+    <!-- Theme color for mobile browsers -->
+    <meta name="theme-color" content="#0a1628" />
+    <title>Captain Dane's Deep Six</title>
 
     <style>
       * {
@@ -28,71 +23,121 @@
       html, body {
         width: 100%;
         height: 100%;
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
         overflow: hidden;
         background: #0a1628;
+        /* Prevent pull-to-refresh on mobile */
         overscroll-behavior: none;
+        /* Prevent text selection */
         -webkit-user-select: none;
         -moz-user-select: none;
         user-select: none;
+        /* Prevent touch callout on iOS */
         -webkit-touch-callout: none;
+        /* Prevent tap highlighting */
         -webkit-tap-highlight-color: transparent;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* Force hardware acceleration */
+        transform: translateZ(0);
       }
 
       #game-container {
         width: 100%;
-        height: calc(100% - 50px);
+        height: 100%;
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
         display: flex;
         justify-content: center;
         align-items: center;
+        /* Safe area padding for notched devices */
         padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+        /* Ensure container takes full viewport */
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
       }
 
+      /* Ensure canvas scales properly */
       #game-container canvas {
         max-width: 100%;
         max-height: 100%;
+        width: auto !important;
+        height: auto !important;
         -o-object-fit: contain;
            object-fit: contain;
+        /* Crisp pixel rendering for pixel art */
         image-rendering: pixelated;
         image-rendering: crisp-edges;
+        /* Ensure canvas is centered */
+        display: block;
+        margin: auto;
       }
 
+      /* Mobile touch action prevention */
       canvas {
         touch-action: none;
       }
-
-      .game-header {
-        background: rgba(0,0,0,0.8);
-        height: 50px;
-        display: flex;
-        justify-content: space-between;
+      
+      /* Landscape mode recommendation for mobile */
+      @media screen and (max-width: 768px) and (orientation: portrait) {
+        #rotate-device-message {
+          display: flex !important;
+        }
+      }
+      
+      #rotate-device-message {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(10, 22, 40, 0.95);
+        z-index: 9999;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        padding: 0 15px;
-        border-bottom: 2px solid #1a7f9e;
-      }
-      .brand {
-        color: #fff;
-        font-size: 12px;
-        text-decoration: none;
-      }
-      .cta-btn {
-        background: linear-gradient(135deg, #e74c3c, #c0392b);
         color: white;
-        padding: 6px 12px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-size: 11px;
-        font-weight: 600;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+      }
+      
+      #rotate-device-message .icon {
+        font-size: 64px;
+        margin-bottom: 20px;
+        animation: rotate-hint 2s ease-in-out infinite;
+      }
+      
+      @keyframes rotate-hint {
+        0%, 100% { transform: rotate(0deg); }
+        25% { transform: rotate(-15deg); }
+        75% { transform: rotate(15deg); }
+      }
+      
+      #rotate-device-message h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      
+      #rotate-device-message p {
+        font-size: 16px;
+        opacity: 0.8;
       }
     </style>
-    <script type="module" crossorigin src="./assets/index-BqmZyxKx.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DOpJYWaD.css">
+    <script type="module" crossorigin src="./assets/index-BuVQI42B.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bto7hmYY.css">
   </head>
   <body>
-    <header class="game-header">
-      <a href="https://walktheplankadventures.com" class="brand">⚓ Walk The Plank Adventures</a>
-      <a href="https://walktheplankadventures.com/#tours" class="cta-btn">Book Real Adventure →</a>
-    </header>
     <div id="game-container"></div>
+    
+    <!-- Rotate device message for portrait mobile -->
+    <div id="rotate-device-message">
+      <div class="icon">📱↻</div>
+      <h2>Rotate Your Device</h2>
+      <p>Captain Dane's Deep Six plays best in landscape mode</p>
+    </div>
   </body>
 </html>
