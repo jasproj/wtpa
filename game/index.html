@@ -24,27 +24,21 @@
         overscroll-behavior: none;
         -webkit-user-select: none;
         user-select: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
       }
 
       #game-container {
         width: 100vw;
         height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
         overflow: hidden;
       }
       
-      /* Force ALL canvases to scale and center */
       canvas {
-        max-width: 100vw !important;
-        max-height: 100vh !important;
-        width: auto !important;
-        height: auto !important;
         touch-action: none;
       }
     </style>
@@ -55,43 +49,73 @@
     <div id="game-container"></div>
     
     <script>
+      let lastWidth = 0;
+      let lastHeight = 0;
+      
       function centerCanvas() {
         const canvas = document.querySelector('canvas');
         if (!canvas) {
-          setTimeout(centerCanvas, 100);
+          requestAnimationFrame(centerCanvas);
           return;
         }
         
-        // Get actual canvas dimensions
+        // Wait for canvas to have actual dimensions
         const cw = canvas.width;
         const ch = canvas.height;
+        
+        if (cw === 0 || ch === 0) {
+          requestAnimationFrame(centerCanvas);
+          return;
+        }
+        
         const vw = window.innerWidth;
         const vh = window.innerHeight;
+        
+        // Only update if dimensions changed
+        if (cw === lastWidth && ch === lastHeight && vw === window.lastVW && vh === window.lastVH) {
+          requestAnimationFrame(centerCanvas);
+          return;
+        }
+        
+        lastWidth = cw;
+        lastHeight = ch;
+        window.lastVW = vw;
+        window.lastVH = vh;
         
         // Calculate scale to fit
         const scale = Math.min(vw / cw, vh / ch);
         
         // Calculate new dimensions
-        const newW = cw * scale;
-        const newH = ch * scale;
+        const newW = Math.floor(cw * scale);
+        const newH = Math.floor(ch * scale);
         
-        // Apply size and center
-        canvas.style.width = newW + 'px';
-        canvas.style.height = newH + 'px';
-        canvas.style.position = 'fixed';
-        canvas.style.left = ((vw - newW) / 2) + 'px';
-        canvas.style.top = ((vh - newH) / 2) + 'px';
+        // Calculate center position
+        const left = Math.floor((vw - newW) / 2);
+        const top = Math.floor((vh - newH) / 2);
+        
+        // Apply styles
+        canvas.style.cssText = `
+          position: fixed !important;
+          width: ${newW}px !important;
+          height: ${newH}px !important;
+          left: ${left}px !important;
+          top: ${top}px !important;
+          touch-action: none;
+        `;
+        
+        // Keep checking in case Phaser resizes
+        requestAnimationFrame(centerCanvas);
       }
       
-      // Keep trying until canvas exists
-      setTimeout(centerCanvas, 100);
-      setTimeout(centerCanvas, 300);
-      setTimeout(centerCanvas, 500);
-      setTimeout(centerCanvas, 1000);
-      setTimeout(centerCanvas, 2000);
+      // Start the loop
+      centerCanvas();
       
-      window.addEventListener('resize', centerCanvas);
-      window.addEventListener('orientationchange', () => setTimeout(centerCanvas, 200));
+      // Also handle orientation changes
+      window.addEventListener('orientationchange', () => {
+        lastWidth = 0; // Force recalc
+        setTimeout(centerCanvas, 100);
+        setTimeout(centerCanvas, 300);
+      });
     </script>
   </body>
 </html>
