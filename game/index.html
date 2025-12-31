@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Mobile-responsive viewport settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <!-- Prevent iOS text size adjustment -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="mobile-web-app-capable" content="yes" />
     <title>Captain Dane's Deep Six | Walk The Plank Adventures</title>
     <meta name="description" content="Dive for treasure, battle sharks, and explore 5 legendary locations with Captain Dane. A free underwater adventure game from Walk The Plank Adventures." />
-    <meta name="keywords" content="Key West tours, underwater game, treasure hunting, Captain Dane, Walk The Plank Adventures" />
     
     <!-- Open Graph -->
     <meta property="og:title" content="Captain Dane's Deep Six | Walk The Plank Adventures" />
@@ -18,111 +20,79 @@
 
     <style>
       * {
-        box-sizing: border-box;
-      }
-      body {
-        background: linear-gradient(180deg, #0a1628 0%, #0d2847 50%, #051520 100%);
         margin: 0;
         padding: 0;
-        min-height: 100vh;
+        box-sizing: border-box;
+      }
+      
+      html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #0a1628;
+        overscroll-behavior: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-tap-highlight-color: transparent;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       }
+
+      #game-container {
+        width: 100%;
+        height: calc(100% - 50px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+      }
+
+      #game-container canvas {
+        max-width: 100%;
+        max-height: 100%;
+        -o-object-fit: contain;
+           object-fit: contain;
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      }
+
+      canvas {
+        touch-action: none;
+      }
+
       .game-header {
-        background: rgba(0,0,0,0.6);
-        padding: 12px 20px;
+        background: rgba(0,0,0,0.8);
+        height: 50px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0 15px;
         border-bottom: 2px solid #1a7f9e;
       }
       .brand {
         color: #fff;
-        font-size: 14px;
+        font-size: 12px;
         text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .brand:hover {
-        color: #4ecdc4;
-      }
-      .brand svg {
-        width: 24px;
-        height: 24px;
       }
       .cta-btn {
         background: linear-gradient(135deg, #e74c3c, #c0392b);
         color: white;
-        padding: 8px 16px;
-        border-radius: 6px;
+        padding: 6px 12px;
+        border-radius: 5px;
         text-decoration: none;
-        font-size: 13px;
+        font-size: 11px;
         font-weight: 600;
-        transition: transform 0.2s, box-shadow 0.2s;
-      }
-      .cta-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(231,76,60,0.4);
-      }
-      #game-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        width: 100%;
-        overflow: hidden;
-      }
-      #game-container canvas {
-        max-width: 100%;
-        height: auto !important;
-        display: block;
-      }
-      @media (max-width: 768px) {
-        #game-container {
-          padding: 0;
-        }
-        .game-footer {
-          padding: 10px;
-        }
-      }
-      .game-footer {
-        text-align: center;
-        padding: 20px;
-        color: #6b8a99;
-        font-size: 12px;
-      }
-      .game-footer a {
-        color: #4ecdc4;
-        text-decoration: none;
-      }
-      .game-footer a:hover {
-        text-decoration: underline;
-      }
-      @media (max-width: 768px) {
-        .game-header {
-          flex-direction: column;
-          gap: 10px;
-          text-align: center;
-        }
       }
     </style>
-    <script type="module" crossorigin src="./assets/index-BezPBOqp.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-DOd4h9JD.css">
+    <script type="module" crossorigin src="./assets/index-BqmZyxKx.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-DOpJYWaD.css">
   </head>
   <body>
     <header class="game-header">
-      <a href="https://walktheplankadventures.com" class="brand">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17h18v2H3v-2zm0-7h18v5H3v-5zm0-4h18v2H3V6z"/></svg>
-        Walk The Plank Adventures
-      </a>
-      <a href="https://walktheplankadventures.com/#tours" class="cta-btn">Book a Real Adventure →</a>
+      <a href="https://walktheplankadventures.com" class="brand">⚓ Walk The Plank Adventures</a>
+      <a href="https://walktheplankadventures.com/#tours" class="cta-btn">Book Real Adventure →</a>
     </header>
-    
     <div id="game-container"></div>
-    
-    <footer class="game-footer">
-      <p>🦈 Captain Dane's Deep Six — A free game from <a href="https://walktheplankadventures.com">Walk The Plank Adventures</a></p>
-      <p>Ready for the real thing? <a href="https://walktheplankadventures.com/#tours">Book a Key West charter</a> with Captain Dane!</p>
-    </footer>
   </body>
 </html>
