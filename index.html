@@ -580,6 +580,148 @@
         }
 
         /* ============================================
+           GAME SECTION - DEEP 6 ARCADE GAME
+        ============================================ */
+
+        .game-section {
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .game-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .game-background img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .game-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.7) 100%);
+            z-index: 2;
+        }
+
+        .game-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 3rem 1.5rem;
+            max-width: 600px;
+        }
+
+        .game-badge {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .game-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.8);
+        }
+
+        .game-tagline {
+            font-family: 'Permanent Marker', cursive;
+            font-size: clamp(1.1rem, 4vw, 1.4rem);
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .game-description {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+
+        .game-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, var(--primary) 0%, #ff8a50 100%);
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 8px 30px rgba(255, 87, 34, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .game-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(255, 87, 34, 0.7);
+        }
+
+        .game-cta:active {
+            transform: translateY(-1px);
+        }
+
+        .game-cta-icon {
+            font-size: 1.2rem;
+        }
+
+        .game-hint {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .game-section {
+                min-height: 600px;
+            }
+            
+            .game-content {
+                padding: 4rem 2rem;
+            }
+        }
+
+        /* ============================================
            VIDEO SECTION - YOUTUBE INTEGRATION
         ============================================ */
 
@@ -1578,6 +1720,25 @@
             <span class="gallery-dot"></span>
             <span class="gallery-dot"></span>
             <span class="gallery-dot"></span>
+        </div>
+    </section>
+
+    <!-- Game Section -->
+    <section class="game-section" id="game">
+        <div class="game-background">
+            <img src="game-promo.png" alt="Captain Dane's Deep 6 Video Game">
+        </div>
+        <div class="game-overlay"></div>
+        <div class="game-content">
+            <span class="game-badge">🎮 FREE TO PLAY</span>
+            <h2 class="game-title">Captain Dane's Deep 6</h2>
+            <p class="game-tagline">Dive deep. Spear fish. Dodge sharks. Collect treasure.</p>
+            <p class="game-description">Experience the thrill of free diving in this retro arcade adventure. How deep can YOU go before running out of air?</p>
+            <a href="game/" class="game-cta" target="_blank">
+                <span class="game-cta-icon">▶</span>
+                PLAY NOW
+            </a>
+            <p class="game-hint">Works on desktop & mobile • No download required</p>
         </div>
     </section>
 
