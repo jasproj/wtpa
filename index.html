@@ -605,7 +605,13 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center;
+            object-position: 20% center; /* Show more of left side (Dane's face) */
+        }
+
+        @media (min-width: 768px) {
+            .game-background img {
+                object-position: center; /* Center on desktop */
+            }
         }
 
         .game-overlay {
