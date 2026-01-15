@@ -1779,7 +1779,7 @@
             <h2 class="gallery-title">Life on the Water</h2>
         </div>
         
-        <div class="gallery-scroll">
+        <div class="gallery-scroll" id="gallery-scroll">
             <div class="gallery-item">
                 <img src="shark_drone_2.jpg" alt="Drone shot of boat with shark">
             </div>
@@ -1819,24 +1819,6 @@
             <span class="gallery-dot"></span>
             <span class="gallery-dot"></span>
             <span class="gallery-dot"></span>
-        </div>
-    </section>
-
-    <!-- Game Section -->
-    <section class="game-section" id="game">
-        <div class="game-background">
-            <img src="game-promo.png" alt="Captain Dane's Deep 6 Video Game">
-        </div>
-        <div class="game-overlay"></div>
-        <div class="game-content">
-            <span class="game-badge">🎮 FREE TO PLAY</span>
-            <p class="game-tagline">Dive deep. Spear fish. Dodge sharks. Collect treasure.</p>
-            <p class="game-description">Experience the thrill of free diving in this retro arcade adventure. How deep can YOU go before running out of air?</p>
-            <a href="game/" class="game-cta" target="_blank">
-                <span class="game-cta-icon">▶</span>
-                PLAY NOW
-            </a>
-            <p class="game-hint">Works on desktop & mobile • No download required</p>
         </div>
     </section>
 
@@ -2122,6 +2104,24 @@
         </div>
     </section>
 
+    <!-- Game Section -->
+    <section class="game-section" id="game">
+        <div class="game-background">
+            <img src="game-promo.png" alt="Captain Dane's Deep 6 Video Game">
+        </div>
+        <div class="game-overlay"></div>
+        <div class="game-content">
+            <span class="game-badge">🎮 FREE TO PLAY</span>
+            <p class="game-tagline">Dive deep. Spear fish. Dodge sharks. Collect treasure.</p>
+            <p class="game-description">Experience the thrill of free diving in this retro arcade adventure. How deep can YOU go before running out of air?</p>
+            <a href="game/" class="game-cta" target="_blank">
+                <span class="game-cta-icon">▶</span>
+                PLAY NOW
+            </a>
+            <p class="game-hint">Works on desktop & mobile • No download required</p>
+        </div>
+    </section>
+
     <!-- Reviews Section -->
     <section class="reviews-section">
         <div class="reviews-header">
@@ -2253,6 +2253,17 @@
         
         updateWeather();
         setInterval(updateWeather, 1800000);
+
+        // Shuffle gallery on each visit
+        function shuffleGallery() {
+            const gallery = document.getElementById('gallery-scroll');
+            const items = Array.from(gallery.children);
+            for (let i = items.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                gallery.appendChild(items[j]);
+            }
+        }
+        shuffleGallery();
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
