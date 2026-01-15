@@ -290,6 +290,65 @@
         }
 
         /* ============================================
+           HEADER - LOGO & NAV
+        ============================================ */
+
+        .site-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 1rem;
+            background: var(--dark);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .header-logo {
+            display: block;
+            height: 50px;
+        }
+
+        .header-logo img {
+            height: 100%;
+            width: auto;
+        }
+
+        .header-cta {
+            background: var(--primary);
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+
+        .header-cta:hover {
+            background: #ff7043;
+        }
+
+        @media (min-width: 768px) {
+            .site-header {
+                padding: 1rem 2rem;
+            }
+            
+            .header-logo {
+                height: 60px;
+            }
+            
+            .header-cta {
+                font-size: 1rem;
+                padding: 0.75rem 1.5rem;
+            }
+        }
+
+        /* ============================================
            THE LEGEND SECTION - CAPTAIN DANE STORY
         ============================================ */
 
@@ -1336,11 +1395,12 @@
         }
 
         .footer-logo {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-transform: uppercase;
             margin-bottom: 1.5rem;
+        }
+
+        .footer-logo img {
+            max-width: 280px;
+            height: auto;
         }
 
         .footer-social {
@@ -1574,6 +1634,14 @@
         <span id="weather-condition">Loading...</span>
         <span class="weather-status" id="weather-status">🌊 Checking...</span>
     </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <a href="/" class="header-logo">
+            <img src="logo.png" alt="Walk The Plank Adventures">
+        </a>
+        <a href="#tours" class="header-cta">Book Now</a>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -2088,7 +2156,9 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-logo">Walk The Plank Adventures</div>
+        <div class="footer-logo">
+            <img src="logo.png" alt="Walk The Plank Adventures">
+        </div>
         
         <div class="footer-social">
             <a href="https://www.youtube.com/@WalkThePlankAdventures" target="_blank" rel="noopener" aria-label="YouTube">
