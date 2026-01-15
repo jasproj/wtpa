@@ -2116,17 +2116,6 @@
         </p>
     </footer>
 
-    <!-- Booking Notification -->
-    <div class="booking-notification" id="booking-notification">
-        <div class="booking-notification-icon"></div>
-        <div>
-            <div class="booking-notification-text">
-                <strong>Jennifer from Boston</strong> just booked a sandbar tour!
-            </div>
-            <div class="booking-notification-time">8 min ago</div>
-        </div>
-    </div>
-
     <!-- JavaScript -->
     <script>
         // Weather Widget
@@ -2174,44 +2163,6 @@
         
         updateWeather();
         setInterval(updateWeather, 1800000);
-
-        // Booking Notifications
-        const notifications = [
-            { name: "Jennifer from Boston", tour: "sandbar tour", time: "8 min ago" },
-            { name: "Mike from Texas", tour: "Captain Dane's charter", time: "12 min ago" },
-            { name: "Sarah from Chicago", tour: "family adventure", time: "23 min ago" },
-            { name: "Dave from Los Angeles", tour: "reef fishing trip", time: "31 min ago" },
-            { name: "Linda from New York", tour: "sunset cruise", time: "5 min ago" },
-            { name: "Tom from Miami", tour: "private sail & snorkel", time: "17 min ago" },
-            { name: "Amanda from Atlanta", tour: "sandbar escape", time: "9 min ago" },
-            { name: "Chris from Seattle", tour: "Captain Dane's special", time: "14 min ago" },
-            { name: "Jessica from Denver", tour: "adults only charter", time: "6 min ago" },
-            { name: "Robert from Phoenix", tour: "8 hour private charter", time: "28 min ago" }
-        ];
-
-        let currentNotification = 0;
-        const notificationEl = document.getElementById('booking-notification');
-
-        function rotateNotification() {
-            currentNotification = (currentNotification + 1) % notifications.length;
-            const notif = notifications[currentNotification];
-            
-            notificationEl.innerHTML = `
-                <div class="booking-notification-icon"></div>
-                <div>
-                    <div class="booking-notification-text">
-                        <strong>${notif.name}</strong> just booked a ${notif.tour}!
-                    </div>
-                    <div class="booking-notification-time">${notif.time}</div>
-                </div>
-            `;
-            
-            // Random interval between 5-10 seconds
-            const randomDelay = Math.floor(Math.random() * 5000) + 5000;
-            setTimeout(rotateNotification, randomDelay);
-        }
-
-        setTimeout(rotateNotification, 6000);
 
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
