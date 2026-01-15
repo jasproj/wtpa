@@ -1036,6 +1036,12 @@
             object-fit: cover;
         }
 
+        .featured-tour-image video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .featured-tour-badge {
             position: absolute;
             top: 1rem;
@@ -1941,7 +1947,10 @@
         <!-- Featured Tour - Captain Dane -->
         <div class="featured-tour">
             <div class="featured-tour-image">
-                <img src="dane_drone.jpg" alt="Captain Dane's Charter - drone view">
+                <video autoplay muted loop playsinline poster="dane_drone.jpg">
+                    <source src="hero-video.mp4" type="video/mp4">
+                    <img src="dane_drone.jpg" alt="Captain Dane's Charter - drone view">
+                </video>
                 <span class="featured-tour-badge">⭐ The Legend Himself</span>
             </div>
             
