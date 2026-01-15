@@ -298,11 +298,11 @@
             justify-content: space-between;
             align-items: center;
             padding: 0.75rem 1rem;
-            background: var(--dark);
+            background: linear-gradient(135deg, #f5e6d3 0%, #e8d4bc 100%);
             position: sticky;
             top: 0;
             z-index: 100;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
         }
 
         .header-logo {
@@ -1389,9 +1389,18 @@
         ============================================ */
 
         footer {
-            background: var(--darker);
+            background: linear-gradient(135deg, #f5e6d3 0%, #e8d4bc 100%);
             padding: 3rem 1rem;
             text-align: center;
+            color: #333;
+        }
+
+        footer a {
+            color: var(--primary);
+        }
+
+        .footer-legal {
+            color: #666;
         }
 
         .footer-logo {
@@ -1413,7 +1422,7 @@
         .footer-social a {
             width: 48px;
             height: 48px;
-            background: rgba(255,255,255,0.1);
+            background: var(--primary);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -1421,8 +1430,9 @@
             transition: all 0.3s ease;
         }
 
-        .footer-social a:active {
-            background: var(--primary);
+        .footer-social a:hover {
+            background: #ff7043;
+            transform: translateY(-2px);
         }
 
         .footer-social svg {
@@ -1433,6 +1443,7 @@
 
         .footer-contact {
             margin-bottom: 2rem;
+            color: #333;
         }
 
         .footer-contact p {
