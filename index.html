@@ -111,6 +111,15 @@
             object-fit: cover;
         }
 
+        .hero-fallback {
+            display: none;
+        }
+
+        /* Show fallback if video fails */
+        .hero-media video:not([playing]) + .hero-fallback {
+            display: block;
+        }
+
         /* Placeholder for hero image */
         .hero-placeholder {
             width: 100%;
@@ -1716,10 +1725,11 @@
     <section class="hero">
         <div class="hero-media">
             <!-- Hero video - looping drone footage -->
-            <video autoplay muted loop playsinline poster="sharks_drone.jpg">
+            <video id="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="sharks_drone.jpg">
                 <source src="hero-video-compressed.mp4" type="video/mp4">
-                <img src="sharks_drone.jpg" alt="Drone shot of boat with sharks in crystal clear Key West waters">
             </video>
+            <!-- Fallback image for devices that don't support video -->
+            <img src="sharks_drone.jpg" alt="Captain Dane in crystal clear Key West waters" class="hero-fallback">
         </div>
         <div class="hero-overlay"></div>
         
@@ -2223,6 +2233,31 @@
         
         updateWeather();
         setInterval(updateWeather, 1800000);
+
+        // Force video play on Android/mobile
+        const heroVideo = document.getElementById('hero-video');
+        const heroFallback = document.querySelector('.hero-fallback');
+        
+        function tryPlayVideo() {
+            if (heroVideo) {
+                heroVideo.play().then(() => {
+                    // Video playing - hide fallback
+                    if (heroFallback) heroFallback.style.display = 'none';
+                }).catch((e) => {
+                    // Video failed - show fallback image
+                    console.log('Video autoplay failed:', e);
+                    if (heroFallback) heroFallback.style.display = 'block';
+                    heroVideo.style.display = 'none';
+                });
+            }
+        }
+        
+        // Try on load
+        tryPlayVideo();
+        
+        // Also try on user interaction (Android often requires this)
+        document.addEventListener('touchstart', tryPlayVideo, { once: true });
+        document.addEventListener('click', tryPlayVideo, { once: true });
 
         // Shuffle gallery on each visit
         function shuffleGallery() {
