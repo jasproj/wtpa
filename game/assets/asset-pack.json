@@ -1,0 +1,399 @@
+{
+  "animation_json": {
+    "files": [
+      {
+        "url": "assets/animations.json",
+        "type": "animation",
+        "key": "animations"
+      }
+    ]
+  },
+  "fonts": {
+    "files": [
+      {
+        "url": "assets/fronts/retro-pixel-arcade.otf.woff2",
+        "type": "font",
+        "key": "RetroPixel",
+        "fontType": "opentype"
+      },
+      {
+        "url": "assets/fronts/supercell-magic_0.ttf",
+        "type": "font",
+        "key": "SupercellMagic",
+        "fontType": "opentype"
+      }
+    ]
+  },
+  "backgrounds": {
+    "files": [
+      {
+        "type": "image",
+        "key": "underwater_bg_puerto_rico",
+        "url": "https://cdn-game-mcp.gambo.ai/0336a0ef-1475-415f-88fc-5ecd11895c73/images/underwater_bg_puerto_rico.png"
+      }
+    ]
+  },
+  "ui_images": {
+    "files": [
+      {
+        "type": "image",
+        "key": "deep_six_game_title",
+        "url": "https://cdn-game-mcp.gambo.ai/21a00785-2b82-4c76-ad77-aa04f76d1471/images/deep_six_game_title.png"
+      },
+      {
+        "type": "image",
+        "key": "captain_dane_portrait",
+        "url": "https://cdn-game-mcp.gambo.ai/b5c15b90-04af-4bc3-8c82-6b0b509d639d/images/captain_dane_portrait.png"
+      }
+    ]
+  },
+  "game_objects": {
+    "files": [
+      {
+        "type": "image",
+        "key": "spear_projectile",
+        "url": "https://cdn-game-mcp.gambo.ai/f4e1609e-5932-4a09-ac63-8e8cc8e00160/images/spear_projectile.png"
+      },
+      {
+        "type": "image",
+        "key": "treasure_gold_coin",
+        "url": "https://cdn-game-mcp.gambo.ai/709b7402-cbe1-4658-a0cd-d4ce3a31b85d/images/treasure_gold_coin.png"
+      },
+      {
+        "type": "image",
+        "key": "treasure_chest",
+        "url": "https://cdn-game-mcp.gambo.ai/74ee6b84-6d55-4300-9909-c4fd583e950c/images/treasure_chest.png"
+      },
+      {
+        "type": "image",
+        "key": "oxygen_bubble",
+        "url": "https://cdn-game-mcp.gambo.ai/9245fc20-9fe4-479a-9720-09cee2da5031/images/oxygen_bubble.png"
+      }
+    ]
+  },
+  "decorations": {
+    "files": [
+      {
+        "type": "image",
+        "key": "coral_formation_variant_1",
+        "url": "https://cdn-game-mcp.gambo.ai/ae60e0b9-bbb5-46a0-bb9c-9d55340928b0/images/coral_formation/variant_1.png"
+      },
+      {
+        "type": "image",
+        "key": "coral_formation_variant_2",
+        "url": "https://cdn-game-mcp.gambo.ai/3a514b3e-2b66-4d2c-b38d-9d6c101ae82d/images/coral_formation/variant_2.png"
+      },
+      {
+        "type": "image",
+        "key": "coral_formation_variant_3",
+        "url": "https://cdn-game-mcp.gambo.ai/14a51da8-594e-47cf-85d3-9f51dc3129a4/images/coral_formation/variant_3.png"
+      },
+      {
+        "type": "image",
+        "key": "coral_formation_variant_4",
+        "url": "https://cdn-game-mcp.gambo.ai/02810e9c-d721-454d-9232-3c423a6de9d4/images/coral_formation/variant_4.png"
+      },
+      {
+        "type": "image",
+        "key": "coral_formation_variant_5",
+        "url": "https://cdn-game-mcp.gambo.ai/4e80fc70-8aa3-46c4-a471-54551197eef4/images/coral_formation/variant_5.png"
+      },
+      {
+        "type": "image",
+        "key": "seaweed_kelp_variant_1",
+        "url": "https://cdn-game-mcp.gambo.ai/4cc1d09f-9ce3-4bfb-89dd-d028dec103e6/images/seaweed_kelp/variant_1.png"
+      },
+      {
+        "type": "image",
+        "key": "seaweed_kelp_variant_2",
+        "url": "https://cdn-game-mcp.gambo.ai/5c4a607e-ccff-46f9-92a4-5125fab5cf7f/images/seaweed_kelp/variant_2.png"
+      },
+      {
+        "type": "image",
+        "key": "seaweed_kelp_variant_3",
+        "url": "https://cdn-game-mcp.gambo.ai/f906bd81-9bf4-4447-9cfc-c3c47ca12c45/images/seaweed_kelp/variant_3.png"
+      },
+      {
+        "type": "image",
+        "key": "seaweed_kelp_variant_4",
+        "url": "https://cdn-game-mcp.gambo.ai/e52fd424-fd98-4580-a05a-72964c53ed7f/images/seaweed_kelp/variant_4.png"
+      },
+      {
+        "type": "image",
+        "key": "seaweed_kelp_variant_5",
+        "url": "https://cdn-game-mcp.gambo.ai/176ee6ac-2a8d-475c-a0cf-bfcbb40acc47/images/seaweed_kelp/variant_5.png"
+      },
+      {
+        "type": "image",
+        "key": "shipwreck_debris_variant_1",
+        "url": "https://cdn-game-mcp.gambo.ai/555557bc-670f-4624-bbfa-8cc2f8e4b357/images/shipwreck_debris/variant_1.png"
+      },
+      {
+        "type": "image",
+        "key": "shipwreck_debris_variant_2",
+        "url": "https://cdn-game-mcp.gambo.ai/9d7c0044-bf13-44cc-bfbe-8a1a7c1bb6d4/images/shipwreck_debris/variant_2.png"
+      },
+      {
+        "type": "image",
+        "key": "shipwreck_debris_variant_3",
+        "url": "https://cdn-game-mcp.gambo.ai/f87d1c59-7517-4954-9414-75648c2ab14d/images/shipwreck_debris/variant_3.png"
+      },
+      {
+        "type": "image",
+        "key": "shipwreck_debris_variant_4",
+        "url": "https://cdn-game-mcp.gambo.ai/7bc79042-52a3-441f-b18f-f61770a9756b/images/shipwreck_debris/variant_4.png"
+      },
+      {
+        "type": "image",
+        "key": "shipwreck_debris_variant_5",
+        "url": "https://cdn-game-mcp.gambo.ai/04980e10-339e-411a-a23c-0accbeb6d6c2/images/shipwreck_debris/variant_5.png"
+      },
+      {
+        "type": "image",
+        "key": "underwater_rock_variant_1",
+        "url": "https://cdn-game-mcp.gambo.ai/574f396b-ee07-42c2-b259-1b18e967f3d2/images/underwater_rock/variant_1.png"
+      },
+      {
+        "type": "image",
+        "key": "underwater_rock_variant_2",
+        "url": "https://cdn-game-mcp.gambo.ai/ca6686de-7288-4a43-ae5b-e2772a500db9/images/underwater_rock/variant_2.png"
+      },
+      {
+        "type": "image",
+        "key": "underwater_rock_variant_3",
+        "url": "https://cdn-game-mcp.gambo.ai/2578fef4-c850-44c3-a091-418aaa695f2c/images/underwater_rock/variant_3.png"
+      },
+      {
+        "type": "image",
+        "key": "underwater_rock_variant_4",
+        "url": "https://cdn-game-mcp.gambo.ai/11fc072d-699d-4eed-89d0-ae56e0301aaa/images/underwater_rock/variant_4.png"
+      },
+      {
+        "type": "image",
+        "key": "underwater_rock_variant_5",
+        "url": "https://cdn-game-mcp.gambo.ai/a094d78a-a012-4a3e-be6e-67c0234a00e3/images/underwater_rock/variant_5.png"
+      },
+      {
+        "type": "image",
+        "key": "sea_anemone_variant_1",
+        "url": "https://cdn-game-mcp.gambo.ai/80bca5cb-10ea-4691-8a83-c47cd0bc979f/images/sea_anemone/variant_1.png"
+      },
+      {
+        "type": "image",
+        "key": "sea_anemone_variant_2",
+        "url": "https://cdn-game-mcp.gambo.ai/2fd2b774-1f48-4c04-96e6-d0eabf52fa47/images/sea_anemone/variant_2.png"
+      },
+      {
+        "type": "image",
+        "key": "sea_anemone_variant_3",
+        "url": "https://cdn-game-mcp.gambo.ai/e44317d3-3a46-4f44-bfb2-31c4f21f1db1/images/sea_anemone/variant_3.png"
+      },
+      {
+        "type": "image",
+        "key": "sea_anemone_variant_4",
+        "url": "https://cdn-game-mcp.gambo.ai/e92eb816-7ee8-4876-a35a-220dd5727c4d/images/sea_anemone/variant_4.png"
+      },
+      {
+        "type": "image",
+        "key": "sea_anemone_variant_5",
+        "url": "https://cdn-game-mcp.gambo.ai/4510608c-56ff-46c7-bd69-723d687cf0c7/images/sea_anemone/variant_5.png"
+      }
+    ]
+  },
+  "diver_animations": {
+    "files": [
+      {
+        "type": "image",
+        "key": "diver_idle_R_frame1",
+        "url": "https://cdn-game-mcp.gambo.ai/b8a1855c-f664-4f91-8b6e-87cb6d6d27f6/animations/diver_idle_R/frame_1.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_idle_R_frame2",
+        "url": "https://cdn-game-mcp.gambo.ai/b8339c4f-b870-462c-861a-5e47e39d9107/animations/diver_idle_R/frame_2.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_idle_front_frame1",
+        "url": "https://cdn-game-mcp.gambo.ai/9f7cc892-3ca0-4c8e-a932-17be1bfffcc0/animations/diver_idle_front/frame_1.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_idle_front_frame2",
+        "url": "https://cdn-game-mcp.gambo.ai/467cb350-ec21-407c-bab8-3449ce37b03d/animations/diver_idle_front/frame_2.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_idle_back_frame1",
+        "url": "https://cdn-game-mcp.gambo.ai/a55c23c6-a2f7-44fe-b604-93385ef5b2fd/animations/diver_idle_back/frame_1.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_idle_back_frame2",
+        "url": "https://cdn-game-mcp.gambo.ai/fb4dc46f-e6ff-4e0d-b681-464de5e9a83d/animations/diver_idle_back/frame_2.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_swim_R_frame1",
+        "url": "https://cdn-game-mcp.gambo.ai/720646c3-3123-4f79-b55a-0b41a06866b5/animations/diver_swim_R/frame_1.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_swim_R_frame2",
+        "url": "https://cdn-game-mcp.gambo.ai/28de0b09-1eaa-4171-a1e5-581e59f56115/animations/diver_swim_R/frame_2.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_swim_front_frame1",
+        "url": "https://cdn-game-mcp.gambo.ai/342947cc-a9ad-4cb7-b643-c28e6673c6e8/animations/diver_swim_front/frame_1.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_swim_front_frame2",
+        "url": "https://cdn-game-mcp.gambo.ai/31306110-f3b4-4d08-b8f1-67454d8ae829/animations/diver_swim_front/frame_2.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_swim_back_frame1",
+        "url": "https://cdn-game-mcp.gambo.ai/4e5a9000-b6e0-4dcc-8a0a-2fdaed698e81/animations/diver_swim_back/frame_1.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_swim_back_frame2",
+        "url": "https://cdn-game-mcp.gambo.ai/7da21176-e40f-40c4-90ba-16e38bad5dbd/animations/diver_swim_back/frame_2.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_shoot_R_frame1",
+        "url": "https://cdn-game-mcp.gambo.ai/4e76403f-ba24-4dd5-a39a-273c38a054d7/animations/diver_shoot_R/frame_1.png"
+      },
+      {
+        "type": "image",
+        "key": "diver_shoot_R_frame2",
+        "url": "https://cdn-game-mcp.gambo.ai/636757bd-f5ef-47ce-94cb-297be890fc02/animations/diver_shoot_R/frame_2.png"
+      }
+    ]
+  },
+  "shark_animations": {
+    "files": [
+      {
+        "type": "image",
+        "key": "shark_swim_R_frame1",
+        "url": "https://cdn-game-mcp.gambo.ai/f03999bc-322a-4fa0-90e9-fb4dc7773bd8/animations/shark_swim_R/frame_1.png"
+      },
+      {
+        "type": "image",
+        "key": "shark_swim_R_frame2",
+        "url": "https://cdn-game-mcp.gambo.ai/a93733d2-ba48-4878-9e12-414b76ea1efd/animations/shark_swim_R/frame_2.png"
+      },
+      {
+        "type": "image",
+        "key": "shark_swim_front_frame1",
+        "url": "https://cdn-game-mcp.gambo.ai/4eea60cd-683e-484b-ada0-10bf3ad0ff38/animations/shark_swim_front/frame_1.png"
+      },
+      {
+        "type": "image",
+        "key": "shark_swim_front_frame2",
+        "url": "https://cdn-game-mcp.gambo.ai/53c71426-11a0-4080-bbfb-d2a28c99edf3/animations/shark_swim_front/frame_2.png"
+      },
+      {
+        "type": "image",
+        "key": "shark_swim_back_frame1",
+        "url": "https://cdn-game-mcp.gambo.ai/1be8326d-1238-49ce-874b-f008a90ace27/animations/shark_swim_back/frame_1.png"
+      },
+      {
+        "type": "image",
+        "key": "shark_swim_back_frame2",
+        "url": "https://cdn-game-mcp.gambo.ai/e67f2b57-bd3b-4e58-93ce-a332cd2987c6/animations/shark_swim_back/frame_2.png"
+      },
+      {
+        "type": "image",
+        "key": "shark_attack_R_frame1",
+        "url": "https://cdn-game-mcp.gambo.ai/582a88d9-515d-4585-ab90-07931a52af3a/animations/shark_attack_R/frame_1.png"
+      },
+      {
+        "type": "image",
+        "key": "shark_attack_R_frame2",
+        "url": "https://cdn-game-mcp.gambo.ai/322c2809-7bcd-4c11-9345-49cafd650429/animations/shark_attack_R/frame_2.png"
+      },
+      {
+        "type": "image",
+        "key": "shark_die_R_frame1",
+        "url": "https://cdn-game-mcp.gambo.ai/bc5ef5ed-80c4-4b99-93ab-4798d0f31fce/animations/shark_die_R/frame_1.png"
+      },
+      {
+        "type": "image",
+        "key": "shark_die_R_frame2",
+        "url": "https://cdn-game-mcp.gambo.ai/3f312add-ce8d-45f7-b9d1-864d99463407/animations/shark_die_R/frame_2.png"
+      }
+    ]
+  },
+  "sound_effects": {
+    "files": [
+      {
+        "type": "audio",
+        "key": "underwater_ambience",
+        "url": "https://cdn-game-mcp.gambo.ai/4ed027f9-c3cc-4d96-9cca-a3120a4f53c2/sound_effects/underwater_ambience.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "bubble_breath",
+        "url": "https://cdn-game-mcp.gambo.ai/69ddf630-55e9-40a8-9a6f-382330f44091/sound_effects/bubble_breath.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "speargun_fire",
+        "url": "https://cdn-game-mcp.gambo.ai/97fe9372-57c0-44c8-9cfb-0e790a367ac4/sound_effects/speargun_fire.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "shark_attack",
+        "url": "https://cdn-game-mcp.gambo.ai/a4aa16c6-115e-4780-8e81-8dc31e794081/sound_effects/shark_attack.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "treasure_collect",
+        "url": "https://cdn-game-mcp.gambo.ai/f2366c61-75d7-4828-b13d-da73ea69f1ff/sound_effects/treasure_collect.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "oxygen_low_warning",
+        "url": "https://cdn-game-mcp.gambo.ai/6bae6282-426c-477c-b595-2acfe8b7eeb0/sound_effects/oxygen_low_warning.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "surface_breath",
+        "url": "https://cdn-game-mcp.gambo.ai/0e923ba4-226a-47f1-9420-f65b4f46471b/sound_effects/surface_breath.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "diver_hurt",
+        "url": "https://cdn-game-mcp.gambo.ai/a3b46ab9-f9ea-4429-91ee-eb2ab9fac6a3/sound_effects/diver_hurt.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "game_over_drown",
+        "url": "https://cdn-game-mcp.gambo.ai/7dc9a5ff-9387-4c1f-bbd9-d24ec02281fc/sound_effects/game_over_drown.mp3"
+      },
+      {
+        "type": "audio",
+        "key": "ui_click_sound",
+        "url": "https://cdn-game-mcp.gambo.ai/e0a4d6d9-947c-41c1-b68e-058c7b4fb632/sound_effects/ui_click_sound.mp3"
+      }
+    ]
+  },
+  "background_musics": {
+    "files": [
+      {
+        "type": "audio",
+        "key": "deep_sea_exploration",
+        "url": "https://cdn-game-mcp.gambo.ai/36145ca2-e31d-45ac-b2e5-ba8f5ab65476/music/deep_sea_exploration.mp3"
+      }
+    ]
+  },
+  "meta": {
+    "app": "Gambo AI",
+    "version": 1,
+    "showAllFilesInBlocks": false
+  }
+}

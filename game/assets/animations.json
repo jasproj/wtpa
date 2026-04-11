@@ -1,0 +1,136 @@
+{
+  "anims": [
+    {
+      "key": "diver_idle_R_anim",
+      "type": "frame",
+      "frames": [
+        { "key": "diver_idle_R_frame1", "duration": 800 },
+        { "key": "diver_idle_R_frame2", "duration": 800 }
+      ],
+      "repeat": -1,
+      "originX": 0.5,
+      "originY": 0.5
+    },
+    {
+      "key": "diver_idle_front_anim",
+      "type": "frame",
+      "frames": [
+        { "key": "diver_idle_front_frame1", "duration": 800 },
+        { "key": "diver_idle_front_frame2", "duration": 800 }
+      ],
+      "repeat": -1,
+      "originX": 0.5,
+      "originY": 0.5
+    },
+    {
+      "key": "diver_idle_back_anim",
+      "type": "frame",
+      "frames": [
+        { "key": "diver_idle_back_frame1", "duration": 800 },
+        { "key": "diver_idle_back_frame2", "duration": 800 }
+      ],
+      "repeat": -1,
+      "originX": 0.5,
+      "originY": 0.5
+    },
+    {
+      "key": "diver_swim_R_anim",
+      "type": "frame",
+      "frames": [
+        { "key": "diver_swim_R_frame1", "duration": 200 },
+        { "key": "diver_swim_R_frame2", "duration": 200 }
+      ],
+      "repeat": -1,
+      "originX": 0.5,
+      "originY": 0.5
+    },
+    {
+      "key": "diver_swim_front_anim",
+      "type": "frame",
+      "frames": [
+        { "key": "diver_swim_front_frame1", "duration": 200 },
+        { "key": "diver_swim_front_frame2", "duration": 200 }
+      ],
+      "repeat": -1,
+      "originX": 0.5,
+      "originY": 0.5
+    },
+    {
+      "key": "diver_swim_back_anim",
+      "type": "frame",
+      "frames": [
+        { "key": "diver_swim_back_frame1", "duration": 200 },
+        { "key": "diver_swim_back_frame2", "duration": 200 }
+      ],
+      "repeat": -1,
+      "originX": 0.5,
+      "originY": 0.5
+    },
+    {
+      "key": "diver_shoot_R_anim",
+      "type": "frame",
+      "frames": [
+        { "key": "diver_shoot_R_frame1", "duration": 100 },
+        { "key": "diver_shoot_R_frame2", "duration": 150 }
+      ],
+      "repeat": 0,
+      "originX": 0.5,
+      "originY": 0.5
+    },
+    {
+      "key": "shark_swim_R_anim",
+      "type": "frame",
+      "frames": [
+        { "key": "shark_swim_R_frame1", "duration": 150 },
+        { "key": "shark_swim_R_frame2", "duration": 150 }
+      ],
+      "repeat": -1,
+      "originX": 0.5,
+      "originY": 0.5
+    },
+    {
+      "key": "shark_swim_front_anim",
+      "type": "frame",
+      "frames": [
+        { "key": "shark_swim_front_frame1", "duration": 150 },
+        { "key": "shark_swim_front_frame2", "duration": 150 }
+      ],
+      "repeat": -1,
+      "originX": 0.5,
+      "originY": 0.5
+    },
+    {
+      "key": "shark_swim_back_anim",
+      "type": "frame",
+      "frames": [
+        { "key": "shark_swim_back_frame1", "duration": 150 },
+        { "key": "shark_swim_back_frame2", "duration": 150 }
+      ],
+      "repeat": -1,
+      "originX": 0.5,
+      "originY": 0.5
+    },
+    {
+      "key": "shark_attack_R_anim",
+      "type": "frame",
+      "frames": [
+        { "key": "shark_attack_R_frame1", "duration": 100 },
+        { "key": "shark_attack_R_frame2", "duration": 150 }
+      ],
+      "repeat": 0,
+      "originX": 0.5,
+      "originY": 0.5
+    },
+    {
+      "key": "shark_die_R_anim",
+      "type": "frame",
+      "frames": [
+        { "key": "shark_die_R_frame1", "duration": 300 },
+        { "key": "shark_die_R_frame2", "duration": 500 }
+      ],
+      "repeat": 0,
+      "originX": 0.5,
+      "originY": 0.5
+    }
+  ]
+}
