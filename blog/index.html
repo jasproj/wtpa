@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key West Fishing & Charter Blog | Walk The Plank Adventures</title>
+    <meta name="description" content="Expert fishing guides, spearfishing tips, and Key West charter advice from Captain Dane. Learn seasonal patterns, gear selection, and regulations.">
+    <meta name="keywords" content="Key West fishing blog, fishing guide, charter tips, spearfishing guide, fishing advice">
+    
+    <meta property="og:title" content="Key West Fishing & Charter Blog">
+    <meta property="og:description" content="Expert articles on Key West fishing, spearfishing, and charters from Captain Dane">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://walktheplankadventures.com/blog/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Key West Fishing & Charter Blog">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #FF5722; --secondary: #00BCD4; --dark: #0D1B2A; }
+        body { font-family: 'Source Sans Pro', sans-serif; background: var(--dark); color: #333; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        header { background: linear-gradient(135deg, #faf4ed 0%, #f5ece0 100%); padding: 1rem 0; border-bottom: 1px solid rgba(0,0,0,0.1); }
+        .header-nav { display: flex; justify-content: space-between; align-items: center; }
+        .header-nav a { color: var(--primary); text-decoration: none; font-weight: 600; }
+        nav { display: flex; gap: 2rem; align-items: center; }
+        nav a { color: #333; text-decoration: none; font-size: 0.95rem; }
+        nav a:hover { color: var(--primary); }
+        .hero-section { background: linear-gradient(135deg, var(--primary) 0%, #ff7043 100%); color: white; padding: 4rem 0; text-align: center; }
+        .hero-section h1 { font-family: 'Oswald', sans-serif; font-size: 3rem; margin-bottom: 1rem; }
+        .hero-section p { font-size: 1.2rem; opacity: 0.95; margin-bottom: 0; }
+        .breadcrumb { padding: 1rem 0; font-size: 0.85rem; color: #666; }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; padding: 3rem 0; }
+        .blog-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .blog-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+        .blog-card img { width: 100%; height: 200px; object-fit: cover; }
+        .blog-card-content { padding: 1.5rem; }
+        .blog-card h3 { font-family: 'Oswald', sans-serif; font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--dark); line-height: 1.3; }
+        .blog-card .meta { font-size: 0.85rem; color: #999; margin-bottom: 1rem; display: flex; gap: 1rem; }
+        .blog-card p { font-size: 0.95rem; color: #666; line-height: 1.6; margin-bottom: 1.5rem; }
+        .blog-card a { display: inline-block; background: var(--primary); color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: 600; transition: background 0.3s; }
+        .blog-card a:hover { background: #ff7043; }
+        .categories { background: #f9f9f9; padding: 2rem; border-radius: 8px; margin-bottom: 3rem; }
+        .categories h2 { font-family: 'Oswald', sans-serif; font-size: 1.5rem; margin-bottom: 1.5rem; color: var(--dark); }
+        .category-list { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .category-tag { background: white; border: 2px solid var(--secondary); color: var(--secondary); padding: 0.6rem 1.2rem; border-radius: 25px; text-decoration: none; font-weight: 600; transition: all 0.3s; }
+        .category-tag:hover { background: var(--secondary); color: white; }
+        .cta-section { background: linear-gradient(135deg, var(--primary) 0%, #ff7043 100%); color: white; padding: 3rem 2rem; border-radius: 8px; text-align: center; margin: 3rem 0; }
+        .cta-section h2 { font-family: 'Oswald', sans-serif; font-size: 2rem; margin-bottom: 1rem; }
+        .btn-cta { display: inline-block; background: white; color: var(--primary); padding: 1rem 2.5rem; font-weight: 600; text-decoration: none; border-radius: 4px; font-family: 'Oswald', sans-serif; transition: transform 0.3s; }
+        .btn-cta:hover { transform: translateY(-2px); }
+        footer { background: linear-gradient(135deg, #faf4ed 0%, #f5ece0 100%); padding: 2rem 0; border-top: 1px solid rgba(0,0,0,0.1); margin-top: 3rem; text-align: center; color: #333; }
+        @media (max-width: 768px) { .hero-section h1 { font-size: 2rem; } .blog-grid { grid-template-columns: 1fr; } }
+    </style>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Walk The Plank Adventures Fishing Blog",
+        "description": "Expert fishing guides and charter advice from Captain Dane",
+        "url": "https://walktheplankadventures.com/blog/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Walk The Plank Adventures",
+            "url": "https://walktheplankadventures.com"
+        }
+    }
+    </script>
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-67D7X60CJF"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-67D7X60CJF');</script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-nav">
+                <a href="../index.html" style="font-family: 'Oswald', sans-serif; font-size: 1.3rem;">Walk The Plank</a>
+                <nav>
+                    <a href="../index.html">Home</a>
+                    <a href="index.html" style="color: var(--primary); font-weight: 700;">Blog</a>
+                    <a href="../index.html#book-dane">Book Now</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="container">
+            <h1>Fishing & Charter Blog</h1>
+            <p>Expert guides, tips, and advice from Captain Dane Karcher</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Home</a> / <span>Blog</span>
+            </div>
+
+            <div class="categories">
+                <h2>Browse By Topic</h2>
+                <div class="category-list">
+                    <a href="#fishing-guides" class="category-tag">Fishing Guides</a>
+                    <a href="#seasonal-tips" class="category-tag">Seasonal Tips</a>
+                    <a href="#spearfishing" class="category-tag">Spearfishing</a>
+                    <a href="#gear-equipment" class="category-tag">Gear & Equipment</a>
+                    <a href="#charter-tips" class="category-tag">Charter Tips</a>
+                </div>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Post 1 -->
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1564157154610-3d6f0f9ffff1?w=400&q=80" alt="Best time to fish in Key West">
+                    <div class="blog-card-content">
+                        <div class="meta">📅 April 2026 • ⏱️ 8 min</div>
+                        <h3>Best Time to Fish in Key West: Monthly Guide 2026</h3>
+                        <p>Discover seasonal patterns, water temperatures, and target fish species for each month. Expert timing from Captain Dane's 20+ years of experience.</p>
+                        <a href="best-time-to-fish-key-west.html">Read Guide →</a>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Spearfishing guide for beginners">
+                    <div class="blog-card-content">
+                        <div class="meta">📅 April 2026 • ⏱️ 10 min</div>
+                        <h3>Complete Key West Spearfishing Guide for Beginners</h3>
+                        <p>Learn techniques, gear selection, safety protocols, and FWC regulations for spearfishing in Key West. Step-by-step from novice to confident hunter.</p>
+                        <a href="key-west-spearfishing-guide.html">Read Guide →</a>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&q=80" alt="Freediving tips for beginners">
+                    <div class="blog-card-content">
+                        <div class="meta">📅 April 2026 • ⏱️ 9 min</div>
+                        <h3>Free Diving Tips for Beginners: Key West Edition</h3>
+                        <p>Master breath-hold training, equalization, and safety from Captain Dane's 120ft diving record. Foundations for spearfishing and deep diving.</p>
+                        <a href="freediving-tips-beginners.html">Read Guide →</a>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1439405326854-014607f694d7?w=400&q=80" alt="What to bring on a fishing charter">
+                    <div class="blog-card-content">
+                        <div class="meta">📅 April 2026 • ⏱️ 7 min</div>
+                        <h3>What to Bring on a Key West Fishing Charter</h3>
+                        <p>Complete packing checklist for comfort and success. All-inclusive charter details and what we provide vs. what you need to bring.</p>
+                        <a href="what-to-bring-fishing-charter.html">Read Guide →</a>
+                    </div>
+                </div>
+
+                <!-- Post 5 -->
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80" alt="Key West fishing seasons">
+                    <div class="blog-card-content">
+                        <div class="meta">📅 April 2026 • ⏱️ 9 min</div>
+                        <h3>Key West Fishing Seasons: What Bites When 2026</h3>
+                        <p>Comprehensive seasonal guide covering target species, migrations, water temperatures, and peak months for each major fish type.</p>
+                        <a href="key-west-fishing-seasons.html">Read Guide →</a>
+                    </div>
+                </div>
+
+                <!-- Post 6 -->
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Spearfishing gear essentials">
+                    <div class="blog-card-content">
+                        <div class="meta">📅 April 2026 • ⏱️ 8 min</div>
+                        <h3>Essential Spearfishing Gear for Key West Waters</h3>
+                        <p>Detailed equipment guide from beginner to advanced. Spearguns, wetsuits, fins, and gear recommendations with budget options.</p>
+                        <a href="spearfishing-gear-essentials.html">Read Guide →</a>
+                    </div>
+                </div>
+
+                <!-- Post 7 -->
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1583212192562-40c695cabccf?w=400&q=80" alt="Reef fish species guide">
+                    <div class="blog-card-content">
+                        <div class="meta">📅 April 2026 • ⏱️ 12 min</div>
+                        <h3>Key West Reef Fish Species: Identification & Hunting Guide</h3>
+                        <p>20+ species profiles with identification, habitats, behaviors, hunting strategies, and eating quality. Expert fish knowledge.</p>
+                        <a href="key-west-reef-fish-species.html">Read Guide →</a>
+                    </div>
+                </div>
+
+                <!-- Post 8 -->
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Night fishing in Key West">
+                    <div class="blog-card-content">
+                        <div class="meta">📅 April 2026 • ⏱️ 8 min</div>
+                        <h3>Night Fishing in Key West: Complete Guide</h3>
+                        <p>Master nocturnal fishing techniques, night species behavior, equipment modifications, and safety protocols. Thrilling after-dark action.</p>
+                        <a href="night-fishing-key-west.html">Read Guide →</a>
+                    </div>
+                </div>
+
+                <!-- Post 9 -->
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1551632440-6fb6ea5a0b84?w=400&q=80" alt="Private charter vs shared tour">
+                    <div class="blog-card-content">
+                        <div class="meta">📅 April 2026 • ⏱️ 6 min</div>
+                        <h3>Private Charter vs Shared Tour: Which is Right for You?</h3>
+                        <p>Honest comparison of both options. Pros, cons, pricing, and who should choose each experience. Make the right choice.</p>
+                        <a href="private-charter-vs-shared-tour.html">Read Guide →</a>
+                    </div>
+                </div>
+
+                <!-- Post 10 -->
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=80" alt="Fishing regulations 2026">
+                    <div class="blog-card-content">
+                        <div class="meta">📅 April 2026 • ⏱️ 9 min</div>
+                        <h3>Key West Fishing Regulations 2026: License, Size, Limits</h3>
+                        <p>Official FWC regulations, license requirements, size limits, bag limits, protected species, and seasonal closures. Stay legal and compliant.</p>
+                        <a href="key-west-fishing-regulations-2026.html">Read Guide →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>Ready to Experience Key West Fishing?</h2>
+                <p style="margin-bottom: 1.5rem; font-size: 1.1rem;">Book with Captain Dane and put these guides into action. Expert knowledge + legendary fishing = unforgettable adventure.</p>
+                <a href="../index.html#book-dane" class="btn-cta">Book Your Charter</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p><strong>Walk The Plank Adventures</strong></p>
+            <p>🎣 <a href="../index.html#book-dane" style="color: var(--primary); text-decoration: none;">Book with Captain Dane</a> • 📍 Key West, FL • 📞 (727) 623-2652</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">© 2026 Walk The Plank Adventures. Expert fishing guides from 20+ years of Key West waters experience.</p>
+        </div>
+    </footer>
+</body>
+</html>
