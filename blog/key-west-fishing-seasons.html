@@ -106,6 +106,14 @@
   ]
 }
 </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-67D7X60CJF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-67D7X60CJF');
+</script>
 </head>
 <body>
     <header>
@@ -299,5 +307,17 @@
             <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">© 2026 Walk The Plank Adventures. Seasonal fishing expertise from 20+ years on the water.</p>
         </div>
     </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="fareharbor.com"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      gtag('event', 'booking_click', {
+        'tour_name': this.dataset.tourName || this.textContent.trim(),
+        'outbound_url': this.href
+      });
+    });
+  });
+});
+</script>
 </body>
 </html>

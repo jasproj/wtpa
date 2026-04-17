@@ -118,7 +118,15 @@
     <script type="module" crossorigin src="assets/index-CWZ2gqw5.js"></script>
     <link rel="stylesheet" crossorigin href="assets/index-w2I1QroK.css">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6156669175458913" crossorigin="anonymous"></script>
-  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-67D7X60CJF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-67D7X60CJF');
+</script>
+</head>
   <body>
     <div id="game-container"></div>
     
@@ -128,5 +136,17 @@
       <h2>Rotate Your Device</h2>
       <p>Captain Dane's Deep Six plays best in landscape mode</p>
     </div>
-  </body>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href*="fareharbor.com"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      gtag('event', 'booking_click', {
+        'tour_name': this.dataset.tourName || this.textContent.trim(),
+        'outbound_url': this.href
+      });
+    });
+  });
+});
+</script>
+</body>
 </html>
