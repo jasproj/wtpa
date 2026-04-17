@@ -1,593 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
-    <!-- SEO Meta Tags -->
-    <title>About Captain Dane Karcher | Walk The Plank Adventures - Key West</title>
-    <meta name="description" content="Meet Captain Dane Karcher - Free diving legend, 15+ year fishing specialist, and founder of Walk The Plank Adventures. Authentic Key West boat charters and spearfishing experiences.">
-    <meta name="keywords" content="Captain Dane Karcher, Key West charter captain, free diving expert, spearfishing guide, authentic charters">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="About Captain Dane Karcher | Walk The Plank Adventures">
-    <meta property="og:description" content="Meet the legend behind Key West's most authentic boat charters and fishing experiences.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://walktheplankadventures.com/about.html">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-67D7X60CJF"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-67D7X60CJF');
-    </script>
-    
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6156669175458913" crossorigin="anonymous"></script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #FF5722;
-            --primary-dark: #E64A19;
-            --secondary: #00BCD4;
-            --accent: #FFC107;
-            --dark: #0D1B2A;
-            --darker: #051923;
-            --light: #FAFAFA;
-            --sand: #F5E6D3;
-        }
-
-        body {
-            font-family: 'Source Sans Pro', sans-serif;
-            background: var(--darker);
-            color: var(--light);
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        /* HEADER & NAV */
-        header {
-            background: rgba(5, 25, 35, 0.95);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 2px solid var(--primary);
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        nav {
-            display: flex;
-            gap: 2rem;
-        }
-
-        nav a {
-            color: var(--light);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--primary);
-        }
-
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
-            padding: 4rem 0;
-            border-bottom: 3px solid var(--primary);
-            margin-top: 60px;
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-family: 'Oswald', sans-serif;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            color: var(--secondary);
-            max-width: 600px;
-        }
-
-        /* ABOUT CONTENT */
-        .about-hero-img {
-            width: 100%;
-            height: 400px;
-            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
-            border-radius: 8px;
-            margin: 2rem 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--light);
-            font-size: 1.2rem;
-        }
-
-        .section {
-            margin: 3rem 0;
-            padding: 2rem;
-            background: rgba(13, 27, 42, 0.5);
-            border-left: 4px solid var(--primary);
-            border-radius: 4px;
-        }
-
-        .section h2 {
-            font-size: 2rem;
-            font-family: 'Oswald', sans-serif;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .section p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-            color: var(--light);
-        }
-
-        /* BIO SECTION */
-        .bio-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .bio-stat {
-            text-align: center;
-            padding: 1.5rem;
-            background: rgba(255, 87, 34, 0.1);
-            border-radius: 8px;
-            border: 1px solid var(--primary);
-        }
-
-        .bio-stat h3 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            font-family: 'Oswald', sans-serif;
-        }
-
-        .bio-stat p {
-            color: var(--light);
-            margin-top: 0.5rem;
-        }
-
-        /* CREDENTIALS */
-        .credentials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 1.5rem 0;
-        }
-
-        .credential-card {
-            background: rgba(0, 188, 212, 0.1);
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--secondary);
-        }
-
-        .credential-card h4 {
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .credential-card p {
-            font-size: 0.95rem;
-            color: #bbb;
-        }
-
-        /* CTA SECTION */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 3rem;
-            border-radius: 8px;
-            text-align: center;
-            margin: 3rem 0;
-        }
-
-        .cta-section h2 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-
-        .cta-btn {
-            display: inline-block;
-            background: var(--dark);
-            color: var(--primary);
-            padding: 1rem 2rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: all 0.3s;
-            margin: 0.5rem;
-            border: 2px solid var(--primary);
-        }
-
-        .cta-btn:hover {
-            background: var(--primary);
-            color: white;
-            transform: scale(1.05);
-        }
-
-        /* FOOTER */
-        footer {
-            background: var(--dark);
-            padding: 2rem;
-            text-align: center;
-            border-top: 2px solid var(--primary);
-            margin-top: 3rem;
-        }
-
-        footer p {
-            color: #999;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* AFFILIATE LINKS */
-        .affiliate-link {
-            color: var(--secondary);
-            text-decoration: underline;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .affiliate-link:hover {
-            color: var(--accent);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .bio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            nav {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
-            .cta-section {
-                padding: 2rem;
-            }
-
-            .credentials-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-67D7X60CJF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-67D7X60CJF');
-</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Walk The Plank Adventures</title>
+<meta name="description" content="Real Key West. No Tourist Traps. Learn about our mission, how we work, and why we connect travelers with local tour operators.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0a0d12;color:#c8d8e8;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px 80px}
+a{color:#e8b84b}
+.btn{display:inline-block;background:#e8b84b;color:#0a0d12;padding:14px 36px;text-decoration:none;font-weight:700;border-radius:6px;font-size:1rem}
+.btn-outline{display:inline-block;border:2px solid #e8b84b;color:#e8b84b;padding:12px 32px;text-decoration:none;font-weight:600;border-radius:6px;font-size:1rem}
+input,textarea{width:100%;padding:12px 16px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.15);border-radius:6px;color:#fff;font-size:1rem;font-family:inherit}
+input::placeholder,textarea::placeholder{color:rgba(255,255,255,0.4)}
+input:focus,textarea:focus{outline:none;border-color:#e8b84b}
+.divider{border:none;border-top:1px solid rgba(255,255,255,0.08);margin:48px 0}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:540px){.grid2{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-    <!-- HEADER -->
-    <header>
-        <div class="container">
-            <a href="/" class="logo">🏴‍☠️ Walk The Plank</a>
-            <nav>
-                <a href="/">Home</a>
-                <a href="/about.html">About</a>
-                <a href="/blog/">Blog</a>
-                <a href="/#booking">Book Now</a>
-                <a href="/advertise.html">Advertise</a>
-            </nav>
-        </div>
-    </header>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container">
-            <h1>Meet Captain Dane Karcher</h1>
-            <p>Key West's legendary free diving expert and charter captain — 15+ years of authentic Florida Keys experience.</p>
-        </div>
-    </section>
+<!-- NAV -->
+<nav style="background:#0a0d12;padding:18px 20px;border-bottom:1px solid rgba(255,255,255,0.08);position:sticky;top:0;z-index:100">
+  <div style="max-width:900px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+    <a href="/" style="color:#e8b84b;text-decoration:none;font-family:Arial,sans-serif;font-size:1.3rem;font-weight:800">Walk The Plank Adventures</a>
+    <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap">
+      <a href="/#booking" style="color:#c8d8e8;text-decoration:none;font-size:0.95rem;opacity:0.8">Charters</a><a href="about.html" style="color:#c8d8e8;text-decoration:none;font-size:0.95rem;opacity:0.8">About</a><a href="mailto:walktheplankadventures@gmail.com" style="color:#c8d8e8;text-decoration:none;font-size:0.95rem;opacity:0.8">Contact</a>
+      <a href="/#booking" class="btn" style="padding:10px 20px;font-size:0.9rem">Browse Tours</a>
+    </div>
+  </div>
+</nav>
 
-    <!-- MAIN CONTENT -->
-    <main class="container">
-        <!-- HERO IMAGE PLACEHOLDER -->
-        <div class="about-hero-img" id="captain-photo">
-            📸 [Captain Dane Hero Image - Aerial/Drone Shot]
-        </div>
+<!-- HERO -->
+<section style="padding:0 0 0 0;background:linear-gradient(180deg,rgba(255,255,255,0.04) 0%,transparent 100%)">
+  <div style="max-width:900px;margin:0 auto;padding:80px 20px 60px;text-align:center">
+    <!-- Hero image placeholder -->
+    <div style="background:rgba(255,255,255,0.05);border:2px dashed rgba(255,255,255,0.15);border-radius:12px;height:320px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;margin-bottom:48px">
+      <span style="font-size:3rem">🌊</span>
+      <span style="color:#c8d8e8;opacity:0.5;font-size:0.9rem">Hero image — replace with a high-quality photo (1200×400px recommended)</span>
+    </div>
+    <h1 style="font-size:clamp(2rem,6vw,3rem);color:#e8b84b;font-weight:800;margin:0 0 16px 0;font-family:Arial,sans-serif">Real Key West. No Tourist Traps.</h1>
+    <p style="font-size:1.15rem;color:#c8d8e8;max-width:640px;margin:0 auto 32px;opacity:0.85;line-height:1.7">Captain Dane Karcher has been fishing, diving, and exploring the Florida Keys for 15+ years. Walk The Plank Adventures was built to share the authentic Keys experience — not the theme park version.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+      <a href="/#booking" class="btn">Browse Charters</a>
+      <a href="mailto:walktheplankadventures@gmail.com" class="btn-outline">Contact Us</a>
+    </div>
+  </div>
+</section>
 
-        <!-- BIO SECTION -->
-        <section class="section">
-            <h2>The Legend of the Keys</h2>
-            <p>
-                Captain Dane Karcher is a <strong>born-and-raised Key West native</strong> with an unmatched passion for Florida's waters. 
-                With <strong>15+ years of professional fishing and diving experience</strong>, Dane has earned a reputation as one of the most 
-                respected charter captains in the Keys.
-            </p>
-            <p>
-                His expertise spans:
-            </p>
-            <ul style="margin: 1rem 0 1rem 2rem; color: var(--light);">
-                <li><strong>Free Diving:</strong> 120ft+ depth, 3+ minute breath holds — records that speak for themselves</li>
-                <li><strong>Spearfishing:</strong> Expert techniques, sustainable practices, local knowledge</li>
-                <li><strong>Fishing Charters:</strong> Reef, wreck, and backcountry expertise — day or night</li>
-                <li><strong>Sandbar Tours:</strong> Hidden gems only locals know</li>
-                <li><strong>Private Charters:</strong> Custom adventures tailored to your skill level and interests</li>
-            </ul>
+<div class="wrap">
 
-            <!-- STATS -->
-            <div class="bio-grid">
-                <div class="bio-stat">
-                    <h3>15+</h3>
-                    <p>Years Professional Experience</p>
-                </div>
-                <div class="bio-stat">
-                    <h3>120ft</h3>
-                    <p>Free Dive Depth Record</p>
-                </div>
-                <div class="bio-stat">
-                    <h3>1000+</h3>
-                    <p>Successful Charters</p>
-                </div>
-                <div class="bio-stat">
-                    <h3>100%</h3>
-                    <p>Local Knowledge</p>
-                </div>
-            </div>
-        </section>
+<!-- STATS -->
+<hr class="divider">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;overflow:hidden">
+  <div style="text-align:center;padding:20px">
+<p style="font-size:2.5rem;font-weight:800;color:#e8b84b;margin:0;font-family:Arial,sans-serif">15+</p>
+<p style="color:#c8d8e8;margin:8px 0 0 0;font-size:0.9rem;opacity:0.8">Years on the Water</p>
+</div><div style="text-align:center;padding:20px">
+<p style="font-size:2.5rem;font-weight:800;color:#e8b84b;margin:0;font-family:Arial,sans-serif">120ft</p>
+<p style="color:#c8d8e8;margin:8px 0 0 0;font-size:0.9rem;opacity:0.8">Free Dive Record</p>
+</div><div style="text-align:center;padding:20px">
+<p style="font-size:2.5rem;font-weight:800;color:#e8b84b;margin:0;font-family:Arial,sans-serif">1,000+</p>
+<p style="color:#c8d8e8;margin:8px 0 0 0;font-size:0.9rem;opacity:0.8">Charters Completed</p>
+</div><div style="text-align:center;padding:20px">
+<p style="font-size:2.5rem;font-weight:800;color:#e8b84b;margin:0;font-family:Arial,sans-serif">100%</p>
+<p style="color:#c8d8e8;margin:8px 0 0 0;font-size:0.9rem;opacity:0.8">Local Knowledge</p>
+</div>
+</div>
 
-        <!-- WHY HE STARTED -->
-        <section class="section">
-            <h2>Why Walk The Plank Adventures?</h2>
-            <p>
-                Captain Dane created Walk The Plank Adventures because he was tired of seeing corporate fishing charters 
-                with captains who didn't know the Keys and tourists who treated the water like an amusement park.
-            </p>
-            <p>
-                <strong>"I wanted to share the real Key West,"</strong> Dane says. <strong>"Not the theme park version. 
-                The authentic experience — the fishing, the diving, the stories, the marine life, the sunsets that change your life."</strong>
-            </p>
-            <p>
-                Every charter with Walk The Plank Adventures is personal. You're not just booking a tour — you're getting 
-                direct access to a local legend who knows these waters better than anyone.
-            </p>
-        </section>
+<!-- PHOTOS -->
+<hr class="divider">
+<h2 style="font-size:1.5rem;color:#e8b84b;font-family:Arial,sans-serif;font-weight:700;margin-bottom:24px">On the Water</h2>
+<div class="grid2" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+  <!-- Photo 1 (wide) -->
+  <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;grid-column:span 2">
+    <span style="font-size:2rem">📷</span>
+    <span style="color:#c8d8e8;font-size:0.85rem;opacity:0.6;text-align:center;padding:0 16px">Captain Dane on the water — aerial shot of the Keys backcountry</span>
+  </div>
+  <!-- Photos 2 & 3 -->
+  div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px">
+<span style="font-size:2rem">📷</span>
+<span style="color:#c8d8e8;font-size:0.85rem;opacity:0.6;text-align:center;padding:0 16px">Captain Dane on the water — aerial shot of the Keys backcountry</span>
+</div><div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px">
+<span style="font-size:2rem">📷</span>
+<span style="color:#c8d8e8;font-size:0.85rem;opacity:0.6;text-align:center;padding:0 16px">Sandbar fishing at sunset — private charter in the Florida Keys</span>
+</div><div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px">
+<span style="font-size:2rem">📷</span>
+<span style="color:#c8d8e8;font-size:0.85rem;opacity:0.6;text-align:center;padding:0 16px">Free diving in crystal-clear Keys water</span>
+</div>
+</div>
 
-        <!-- WHAT MAKES HIM DIFFERENT -->
-        <section class="section">
-            <h2>What Makes Our Charters Different</h2>
-            
-            <div style="margin: 2rem 0;">
-                <h3 style="color: var(--secondary); margin: 1rem 0 0.5rem 0;">🎯 Small Groups, Big Experience</h3>
-                <p>No cattle-call fishing boats. We limit groups to maximize your experience and personal attention.</p>
-            </div>
+<!-- VALUES -->
+<hr class="divider">
+<h2 style="font-size:1.5rem;color:#e8b84b;font-family:Arial,sans-serif;font-weight:700;text-align:center;margin-bottom:32px">What We Stand For</h2>
+<div class="grid3">
+  <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:24px;text-align:center">
+<div style="font-size:2rem;margin-bottom:10px">🎯</div>
+<h3 style="color:#e8b84b;font-size:1rem;font-weight:700;margin:0 0 8px 0">Small Groups</h3>
+<p style="color:#c8d8e8;font-size:0.9rem;margin:0;line-height:1.6">No cattle-call boats. Every charter is intimate, personal, and tailored to your group.</p>
+</div><div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:24px;text-align:center">
+<div style="font-size:2rem;margin-bottom:10px">🧭</div>
+<h3 style="color:#e8b84b;font-size:1rem;font-weight:700;margin:0 0 8px 0">Local-Only Knowledge</h3>
+<p style="color:#c8d8e8;font-size:0.9rem;margin:0;line-height:1.6">Captain Dane knows spots and patterns that aren't in any guide or app.</p>
+</div><div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:24px;text-align:center">
+<div style="font-size:2rem;margin-bottom:10px">🌊</div>
+<h3 style="color:#e8b84b;font-size:1rem;font-weight:700;margin:0 0 8px 0">Authentic Experience</h3>
+<p style="color:#c8d8e8;font-size:0.9rem;margin:0;line-height:1.6">Real fishing, real diving, real freedom — not a curated tourist script.</p>
+</div><div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:24px;text-align:center">
+<div style="font-size:2rem;margin-bottom:10px">⚡</div>
+<h3 style="color:#e8b84b;font-size:1rem;font-weight:700;margin:0 0 8px 0">Safety First</h3>
+<p style="color:#c8d8e8;font-size:0.9rem;margin:0;line-height:1.6">USCG licensed, PADI certified, 15+ years incident-free. Your safety is non-negotiable.</p>
+</div><div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:24px;text-align:center">
+<div style="font-size:2rem;margin-bottom:10px">🐢</div>
+<h3 style="color:#e8b84b;font-size:1rem;font-weight:700;margin:0 0 8px 0">Reef Respect</h3>
+<p style="color:#c8d8e8;font-size:0.9rem;margin:0;line-height:1.6">Sustainable practices, marine life protection, and reef-safe sunscreen required on every charter.</p>
+</div><div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:24px;text-align:center">
+<div style="font-size:2rem;margin-bottom:10px">🏴‍☠️</div>
+<h3 style="color:#e8b84b;font-size:1rem;font-weight:700;margin:0 0 8px 0">Stories Included</h3>
+<p style="color:#c8d8e8;font-size:0.9rem;margin:0;line-height:1.6">Every charter comes with Keys history, local lore, and stories you'll actually want to tell.</p>
+</div>
+</div>
 
-            <div style="margin: 2rem 0;">
-                <h3 style="color: var(--secondary); margin: 1rem 0 0.5rem 0;">🧭 Local Knowledge You Can't Google</h3>
-                <p>Captain Dane knows spots, techniques, and seasonal patterns that don't appear in any guide. After 15 years, 
-                he's earned the trust of local fishermen, shop owners, and guides across the Keys.</p>
-            </div>
+<!-- AFFILIATE DISCLOSURE -->
+<hr class="divider">
+<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:8px;padding:24px">
+  <h3 style="color:#e8b84b;margin-bottom:12px;font-size:1rem;font-weight:700">Transparency &amp; Affiliate Disclosure</h3>
+  <p style="color:#c8d8e8;font-size:0.9rem;line-height:1.7;margin:0;opacity:0.8">We are a tour discovery platform, not a tour operator. When you click a booking link, you go directly to the operator's booking system at their prices. We earn a small referral commission from some bookings at no additional cost to you. This commission comes from the operator's existing marketing budget and never affects what you pay.</p>
+</div>
 
-            <div style="margin: 2rem 0;">
-                <h3 style="color: var(--secondary); margin: 1rem 0 0.5rem 0;">🌊 Authentic Experience</h3>
-                <p>This isn't theater. You'll experience real fishing, real diving, real freedom — not a curated tourist experience.</p>
-            </div>
+<!-- EMAIL SIGNUP -->
+<hr class="divider">
+<div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:40px 32px;text-align:center">
+  <h2 style="font-size:1.5rem;color:#e8b84b;font-family:Arial,sans-serif;font-weight:700;margin:0 0 8px 0">🏴‍☠️ Get Captain Dane's Local Picks</h2>
+  <p style="color:#c8d8e8;margin:0 0 28px 0;opacity:0.8">Get trip ideas, local tips, and occasional deals — no spam, unsubscribe any time.</p>
+  <form action="https://formspree.io/f/mbdjldrd" method="POST" style="max-width:480px;margin:0 auto;display:flex;flex-direction:column;gap:14px">
+    <input type="text" name="name" placeholder="Your name" required>
+    <input type="email" name="email" placeholder="Your email address" required>
+    <input type="hidden" name="_subject" value="New email signup — Walk The Plank Adventures">
+    <input type="hidden" name="_next" value="https://walktheplankadventures.com/thanks.html">
+    <button type="submit" style="background:#e8b84b;color:#0a0d12;padding:14px;border:none;border-radius:6px;font-size:1rem;font-weight:700;cursor:pointer;font-family:inherit">Get Insider Tips</button>
+  </form>
+</div>
 
-            <div style="margin: 2rem 0;">
-                <h3 style="color: var(--secondary); margin: 1rem 0 0.5rem 0;">🏴‍☠️ Stories Worth Telling</h3>
-                <p>When you charter with Captain Dane, you don't just get a boat ride — you get stories that'll last a lifetime.</p>
-            </div>
+<!-- CONTACT -->
+<hr class="divider">
+<div style="text-align:center">
+  <h2 style="font-size:1.5rem;color:#e8b84b;font-family:Arial,sans-serif;font-weight:700;margin-bottom:16px">Get in Touch</h2>
+  <p style="color:#c8d8e8;margin-bottom:20px;opacity:0.8">Questions about a tour? Want to suggest an operator? We'd love to hear from you.</p>
+  <a href="mailto:walktheplankadventures@gmail.com" style="color:#e8b84b;font-size:1.1rem;font-weight:600">walktheplankadventures@gmail.com</a>
+  <div style="margin-top:32px">
+    <a href="/#booking" class="btn">Browse Charters</a>
+  </div>
+</div>
 
-            <div style="margin: 2rem 0;">
-                <h3 style="color: var(--secondary); margin: 1rem 0 0.5rem 0;">⚡ Safety First</h3>
-                <p>Professional certifications, modern equipment, and 15+ years of incident-free operations. Your safety is non-negotiable.</p>
-            </div>
-        </section>
+</div><!-- /wrap -->
 
-        <!-- CREDENTIALS -->
-        <section class="section">
-            <h2>Certifications & Credentials</h2>
-            <div class="credentials-grid">
-                <div class="credential-card">
-                    <h4>🏆 PADI Divemaster</h4>
-                    <p>Professional Association of Diving Instructors certification — expertise in diving safety and instruction.</p>
-                </div>
-                <div class="credential-card">
-                    <h4>🎯 USCG Captain's License</h4>
-                    <p>Licensed to operate passenger vessels up to 100 tons in inland and offshore waters.</p>
-                </div>
-                <div class="credential-card">
-                    <h4>🥇 Freediving Instructor</h4>
-                    <p>Certified to teach breath-hold diving techniques and safety protocols.</p>
-                </div>
-                <div class="credential-card">
-                    <h4>⚕️ First Aid / CPR Certified</h4>
-                    <p>Current certifications in emergency medical response and water rescue.</p>
-                </div>
-                <div class="credential-card">
-                    <h4>📡 FCC Marine Radio License</h4>
-                    <p>Licensed marine communications operator for safety and coordination.</p>
-                </div>
-                <div class="credential-card">
-                    <h4>🌍 Local Expert</h4>
-                    <p>15+ years navigating, fishing, and diving the Florida Keys — the best credential of all.</p>
-                </div>
-            </div>
-        </section>
+<!-- FOOTER -->
+<footer style="background:#0a0d12;padding:32px 20px;border-top:1px solid rgba(255,255,255,0.08);text-align:center">
+  <p style="color:#e8b84b;font-weight:700;margin:0 0 8px 0">Walk The Plank Adventures</p>
+  <p style="color:#c8d8e8;font-size:0.85rem;opacity:0.5;margin:0">walktheplankadventures@gmail.com</p>
+</footer>
 
-        <!-- GEAR RECOMMENDATIONS -->
-        <section class="section">
-            <h2>Gear Recommendations</h2>
-            <p>
-                If you're planning a charter or want to upgrade your diving/fishing gear, we recommend investing in quality equipment. 
-                Here are some trusted picks:
-            </p>
-            <ul style="margin: 1rem 0 1rem 2rem; color: var(--light);">
-                <li><a href="https://amazon.com/dp/B001234567?tag=wandertrav0c1-20" class="affiliate-link">Premium diving mask with wide field of view</a> — essential for safety and visibility</li>
-                <li><a href="https://amazon.com/dp/B001234567?tag=wandertrav0c1-20" class="affiliate-link">5mm neoprene wetsuit</a> — perfect for year-round Key West diving</li>
-                <li><a href="https://amazon.com/dp/B001234567?tag=wandertrav0c1-20" class="affiliate-link">Professional speargun</a> — for spearfishing adventures</li>
-                <li><a href="https://amazon.com/dp/B001234567?tag=wandertrav0c1-20" class="affiliate-link">Reef-safe sunscreen SPF 50</a> — protect yourself and our reefs</li>
-                <li><a href="https://amazon.com/dp/B001234567?tag=wandertrav0c1-20" class="affiliate-link">Waterproof GoPro with mounts</a> — capture your memories</li>
-            </ul>
-        </section>
-
-        <!-- CTA -->
-        <section class="cta-section">
-            <h2>Ready for an Authentic Key West Adventure?</h2>
-            <p style="margin-bottom: 2rem; color: white; font-size: 1.1rem;">
-                Book a charter with Captain Dane and experience the real Florida Keys.
-            </p>
-            <a href="https://fareharbor.com/embeds/book/walktheplankadventures/items/671081/calendar/2025/12/?flow=577477&full-items=yes" class="cta-btn" target="_blank">
-                Book Captain Dane Now
-            </a>
-            <a href="/#booking" class="cta-btn">
-                View All Charters
-            </a>
-        </section>
-
-        <!-- SCHEMA MARKUP -->
-        <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Captain Dane Karcher",
-            "jobTitle": "Professional Charter Captain",
-            "url": "https://walktheplankadventures.com/about.html",
-            "image": "https://walktheplankadventures.com/dane-photo.jpg",
-            "description": "Free diving expert and Key West charter captain with 15+ years of experience",
-            "sameAs": [
-                "https://walktheplankadventures.com"
-            ],
-            "knowsAbout": [
-                "Free Diving",
-                "Spearfishing",
-                "Fishing Charters",
-                "Sandbar Tours",
-                "Key West Tourism"
-            ],
-            "worksFor": {
-                "@type": "LocalBusiness",
-                "name": "Walk The Plank Adventures",
-                "url": "https://walktheplankadventures.com"
-            }
-        }
-        </script>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Walk The Plank Adventures. Captain Dane Karcher, Key West, FL.</p>
-            <p>
-                <a href="/">Home</a> • 
-                <a href="/about.html">About</a> • 
-                <a href="/blog/">Blog</a> • 
-                <a href="/advertise.html">Advertise</a>
-            </p>
-            <p style="margin-top: 1rem;">
-                <a href="https://fareharbor.com/embeds/book/walktheplankadventures/items/671081/calendar/2025/12/?flow=577477&full-items=yes" target="_blank">
-                    Book Now on FareHarbor
-                </a>
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        // GA4 Event Tracking
-        function trackAboutPageView() {
-            gtag('event', 'page_view', {
-                page_path: '/about.html',
-                page_title: 'About Captain Dane'
-            });
-        }
-
-        function trackAffiliateClick(productName) {
-            gtag('event', 'affiliate_click', {
-                product_name: productName,
-                event_category: 'conversion'
-            });
-        }
-
-        function trackBookingClick() {
-            gtag('event', 'booking_click', {
-                source: 'about_page',
-                event_category: 'conversion'
-            });
-        }
-
-        // Track page view on load
-        window.addEventListener('load', trackAboutPageView);
-
-        // Track affiliate link clicks
-        document.querySelectorAll('.affiliate-link').forEach(link => {
-            link.addEventListener('click', function() {
-                trackAffiliateClick(this.textContent);
-            });
-        });
-
-        // Track booking button clicks
-        document.querySelectorAll('.cta-btn').forEach(btn => {
-            if (btn.href.includes('fareharbor')) {
-                btn.addEventListener('click', trackBookingClick);
-            }
-        });
-    </script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('a[href*="fareharbor.com"]').forEach(function(link) {
-    link.addEventListener('click', function() {
-      gtag('event', 'booking_click', {
-        'tour_name': this.dataset.tourName || this.textContent.trim(),
-        'outbound_url': this.href
-      });
-    });
-  });
-});
-</script>
 </body>
 </html>
