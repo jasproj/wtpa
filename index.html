@@ -1712,14 +1712,7 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-67D7X60CJF');
-      
-      function trackBookingClick(tourName) {
-        gtag('event', 'booking_click', {
-          tour_name: tourName,
-          event_category: 'conversion'
-        });
-      }
-      
+
       function trackAffiliateClick(productName) {
         gtag('event', 'affiliate_click', {
           product_name: productName,
@@ -1818,6 +1811,7 @@
   ]
 }
 </script>
+<script src="/tracking.js" defer></script>
 </head>
 <body>
 
