@@ -96,6 +96,37 @@
             }
         }
 
+        /* Mobile hero compression — KWST pattern (styles.css:1559-1591).
+           Targets ~120px above-the-fold; hides decorative elements
+           (badge, subtitle, stats) but keeps h1 + primary CTA visible
+           so the user can still book Captain Dane without scrolling. */
+        @media (max-width: 767px) {
+            .hero {
+                min-height: auto;
+                padding: 16px 12px 10px;
+                justify-content: flex-start;
+            }
+            .hero-badge,
+            .hero-subtitle,
+            .hero-stats {
+                display: none;
+            }
+            .hero-title {
+                font-size: 1.05rem;
+                line-height: 1.2;
+                margin: 0 0 8px;
+            }
+            .hero-cta {
+                gap: 8px;
+            }
+            .hero-cta .btn-primary,
+            .hero-cta .btn-secondary {
+                min-height: 44px;
+                padding: 10px 16px;
+                font-size: 0.9rem;
+            }
+        }
+
         .hero-media {
             position: absolute;
             top: 0;
@@ -1936,7 +1967,7 @@
                     <div class="tour-card-footer">
                         <div class="tour-card-price">$175 <span>/person</span></div>
                         <a href="https://fareharbor.com/embeds/book/saltygoatfishingcharters/items/54010/?asn=fhdn&asn-ref=walktheplankadventures&ref=walktheplankadventures&full-items=yes&flow=47917&marketplace=yes" 
-                           target="_blank" rel="noopener" class="btn-book">Book</a>
+                           target="_blank" rel="noopener" class="btn-book">Check Availability</a>
                     </div>
                 </div>
             </div>
@@ -1953,7 +1984,7 @@
                     <div class="tour-card-footer">
                         <div class="tour-card-price">$695 <span>/group</span></div>
                         <a href="https://fareharbor.com/embeds/book/brightwild-adventures/items/475963/?asn=fhdn&asn-ref=walktheplankadventures&ref=walktheplankadventures&full-items=yes&flow=1194814&marketplace=yes" 
-                           target="_blank" rel="noopener" class="btn-book">Book</a>
+                           target="_blank" rel="noopener" class="btn-book">Check Availability</a>
                     </div>
                 </div>
             </div>
@@ -1969,7 +2000,7 @@
                     <div class="tour-card-footer">
                         <div class="tour-card-price">$125 <span>/person</span></div>
                         <a href="https://fareharbor.com/embeds/book/fishmonstermax/items/398098/?asn=fhdn&asn-ref=walktheplankadventures&ref=walktheplankadventures&full-items=yes&flow=1101330&marketplace=yes" 
-                           target="_blank" rel="noopener" class="btn-book">Book</a>
+                           target="_blank" rel="noopener" class="btn-book">Check Availability</a>
                     </div>
                 </div>
             </div>
@@ -1986,7 +2017,7 @@
                     <div class="tour-card-footer">
                         <div class="tour-card-price">$795 <span>/group</span></div>
                         <a href="https://fareharbor.com/embeds/book/brightwild-adventures/items/534214/?asn=fhdn&asn-ref=walktheplankadventures&ref=walktheplankadventures&full-items=yes&flow=1194814&marketplace=yes" 
-                           target="_blank" rel="noopener" class="btn-book">Book</a>
+                           target="_blank" rel="noopener" class="btn-book">Check Availability</a>
                     </div>
                 </div>
             </div>
@@ -2002,7 +2033,7 @@
                     <div class="tour-card-footer">
                         <div class="tour-card-price">$99 <span>/person</span></div>
                         <a href="https://fareharbor.com/embeds/book/dangercharters/items/471375/?asn=fhdn&asn-ref=walktheplankadventures&ref=walktheplankadventures&full-items=yes&flow=1177614&marketplace=yes" 
-                           target="_blank" rel="noopener" class="btn-book">Book</a>
+                           target="_blank" rel="noopener" class="btn-book">Check Availability</a>
                     </div>
                 </div>
             </div>
@@ -2018,7 +2049,7 @@
                     <div class="tour-card-footer">
                         <div class="tour-card-price">$550 <span>/trip</span></div>
                         <a href="https://fareharbor.com/embeds/book/sixfinscharter/items/541394/?asn=fhdn&asn-ref=walktheplankadventures&ref=walktheplankadventures&full-items=yes&flow=1217027&marketplace=yes" 
-                           target="_blank" rel="noopener" class="btn-book">Book</a>
+                           target="_blank" rel="noopener" class="btn-book">Check Availability</a>
                     </div>
                 </div>
             </div>
@@ -2035,7 +2066,7 @@
                     <div class="tour-card-footer">
                         <div class="tour-card-price">$450 <span>/day</span></div>
                         <a href="https://fareharbor.com/embeds/book/thebeachweekendkeywest/items/434460/?asn=fhdn&asn-ref=walktheplankadventures&ref=walktheplankadventures&full-items=yes&flow=1135810&marketplace=yes" 
-                           target="_blank" rel="noopener" class="btn-book">Book</a>
+                           target="_blank" rel="noopener" class="btn-book">Check Availability</a>
                     </div>
                 </div>
             </div>
@@ -2051,7 +2082,7 @@
                     <div class="tour-card-footer">
                         <div class="tour-card-price">$1,100 <span>/charter</span></div>
                         <a href="https://fareharbor.com/embeds/book/3rddegreecharters/items/622770/?asn=fhdn&asn-ref=walktheplankadventures&ref=walktheplankadventures&full-items=yes&flow=1324073&marketplace=yes" 
-                           target="_blank" rel="noopener" class="btn-book">Book</a>
+                           target="_blank" rel="noopener" class="btn-book">Check Availability</a>
                     </div>
                 </div>
             </div>
