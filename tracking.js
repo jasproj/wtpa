@@ -17,9 +17,27 @@
    block; this file just calls gtag('event', 'booking_click', ...) and
    trusts whichever property is configured. Defensive no-op if gtag is
    undefined.
+
+   utm_source tagging:
+   - On every FareHarbor link click, we append utm_source=walktheplankadventures
+     so GA4 can attribute the booking to WTPA.
+   - Works for both the own-inventory link and the 8 affiliate-tagged
+     links to partner operators (asn-ref / ref preserved on those).
+   - appendUtmSource is a vendored copy of _tools/generators/source-tag.js
+     (_tools PR #84, 4e73885). Inlined here instead of loaded as a
+     separate <script> to avoid editing every page <head>.
 */
 
 (function () {
+    function appendUtmSource(url, slug) {
+        if (typeof url !== 'string' || !url) return url;
+        if (typeof slug !== 'string' || !slug) return url;
+        if (url.indexOf('fareharbor.com') === -1) return url;
+        if (/[?&]utm_source=/.test(url)) return url;
+        var sep = url.indexOf('?') === -1 ? '?' : '&';
+        return url + sep + 'utm_source=' + encodeURIComponent(slug);
+    }
+
     var CTA_CLASSES = [
         'btn-book',          // homepage tour cards (8 booking buttons)
         'btn-primary',       // hero "Book Captain Dane"
@@ -84,6 +102,9 @@
         var href = link.getAttribute('href') || '';
         var isFareHarbor = href.indexOf('fareharbor.com') !== -1;
         if (!isFareHarbor && !hasCtaClass(link)) return;
+        if (isFareHarbor) {
+            link.href = appendUtmSource(link.href, 'walktheplankadventures');
+        }
         var ctx = readContext(link);
         if (typeof gtag === 'undefined') return;
         gtag('event', 'booking_click', {
