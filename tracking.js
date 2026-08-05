@@ -9,7 +9,7 @@
    Survives runtime-rendered anchors.
 
    WTPA's booking model is hybrid: 1 own-inventory link to
-   /walktheplankadventures/ plus 8 affiliate-tagged links to partner
+   /walktheplankadventures/ plus 7 affiliate-tagged links to partner
    operators (asn-ref=walktheplankadventures + ref=walktheplankadventures).
    The delegated handler covers all of them.
 
@@ -21,7 +21,7 @@
    utm_source tagging:
    - On every FareHarbor link click, we append utm_source=walktheplankadventures
      so GA4 can attribute the booking to WTPA.
-   - Works for both the own-inventory link and the 8 affiliate-tagged
+   - Works for both the own-inventory link and the 7 affiliate-tagged
      links to partner operators (asn-ref / ref preserved on those).
    - appendUtmSource is a vendored copy of _tools/generators/source-tag.js
      (_tools PR #84, 4e73885). Inlined here instead of loaded as a
