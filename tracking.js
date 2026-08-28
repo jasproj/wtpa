@@ -13,7 +13,7 @@
    operators (asn-ref=walktheplankadventures + ref=walktheplankadventures).
    The delegated handler covers all of them.
 
-   GA4 ID is set per-page by the inline gtag('config', 'G-67D7X60CJF')
+   GA4 ID is set per-page by the inline gtag('config', 'G-4Q1H6GCM71')
    block; this file just calls gtag('event', 'booking_click', ...) and
    trusts whichever property is configured. Defensive no-op if gtag is
    undefined.
