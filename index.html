@@ -27,7 +27,9 @@
     <meta name="twitter:image" content="https://walktheplankadventures.com/og-image.png">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Permanent+Marker&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&family=Permanent+Marker&display=swap"></noscript>
+    <link rel="preload" as="image" href="sharks_drone-800.webp" type="image/webp" fetchpriority="high">
     
     <!-- FareHarbor Lightframe API -->
     <script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes&shortname=walktheplankadventures"></script>
@@ -1826,7 +1828,8 @@
 }
 </script>
 <script src="/tracking.js" defer></script>
-<link rel="stylesheet" href="/sponsor-slot.css">
+<link rel="stylesheet" href="/sponsor-slot.css" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="/sponsor-slot.css"></noscript>
 <script src="/sponsor-slot.js" defer></script>
 
 <script type="application/ld+json">
@@ -2012,11 +2015,9 @@
     <section class="hero">
         <div class="hero-media">
             <!-- Hero video - looping drone footage -->
-            <video id="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="sharks_drone.jpg">
-                <source src="hero-video-compressed.mp4" type="video/mp4">
-            </video>
+            <video id="hero-video" muted loop playsinline webkit-playsinline preload="none" poster="sharks_drone-800.webp" data-src="hero-video-compressed.mp4"></video>
             <!-- Fallback image for devices that don't support video -->
-            <img src="sharks_drone.jpg" alt="Captain Dane in crystal clear Key West waters" class="hero-fallback">
+            <img src="sharks_drone-800.webp" alt="Captain Dane in crystal clear Key West waters" class="hero-fallback">
         </div>
         <div class="hero-overlay"></div>
         
@@ -2072,9 +2073,8 @@
         <!-- Featured Tour - Captain Dane -->
         <div class="featured-tour">
             <div class="featured-tour-image">
-                <video autoplay muted loop playsinline poster="dane_drone.jpg">
-                    <source src="wtpa_hero.mp4" type="video/mp4">
-                    <img src="dane_drone.jpg" alt="Captain Dane's Charter - drone view">
+                <video muted loop playsinline preload="none" poster="dane_drone-800.webp" data-src="wtpa_hero.mp4" class="lazy-video">
+                    <img src="dane_drone-800.webp" alt="Captain Dane's Charter - drone view">
                 </video>
                 <span class="featured-tour-badge">⭐ The Legend Himself</span>
             </div>
@@ -2117,7 +2117,7 @@
             <!-- Tour 1: Salty Goat -->
             <div class="tour-card">
                 <div class="tour-card-image">
-                    <img src="Salty_Goat.webp" alt="Salty Goat Fishing">
+                    <img src="Salty_Goat-800.webp" alt="Salty Goat Fishing">
                 </div>
                 <div class="tour-card-content">
                     <h4>Salty Goat Half-Day</h4>
@@ -2199,7 +2199,7 @@
             <!-- Tour 7: Center Console Rentals -->
             <div class="tour-card">
                 <div class="tour-card-image">
-                    <img src="center_console_rental.webp" alt="A centre-console boat with fishing rods running past a mangrove-lined sandbar in shallow turquoise water">
+                    <img src="center_console_rental-800.webp" alt="A centre-console boat with fishing rods running past a mangrove-lined sandbar in shallow turquoise water">
                     <span class="tour-card-premium">⭐ Featured</span>
                 </div>
                 <div class="tour-card-content">
@@ -2216,7 +2216,7 @@
             <!-- Tour 8: 8 Hour Private -->
             <div class="tour-card">
                 <div class="tour-card-image">
-                    <img src="8_hour_private.webp" alt="8 Hour Charter">
+                    <img src="8_hour_private-800.webp" alt="8 Hour Charter">
                 </div>
                 <div class="tour-card-content">
                     <h4>8 Hour Private Charter</h4>
@@ -2244,31 +2244,31 @@
         
         <div class="gallery-scroll" id="gallery-scroll">
             <div class="gallery-item">
-                <img src="shark_drone_2.jpg" alt="Drone shot of boat with shark">
+                <img src="shark_drone_2-800.webp" alt="Drone shot of boat with shark">
             </div>
             <div class="gallery-item">
-                <img src="dane_drone.jpg" alt="Captain Dane drone shot in crystal water">
+                <img src="dane_drone-800.webp" alt="Captain Dane drone shot in crystal water">
             </div>
             <div class="gallery-item">
-                <img src="85C06349-850E-4082-9BF5-85EA8053CFF4.jpeg" alt="Floating in crystal clear water">
+                <img src="85C06349-850E-4082-9BF5-85EA8053CFF4-800.webp" alt="Floating in crystal clear water">
             </div>
             <div class="gallery-item">
-                <img src="8_hour.jpeg" alt="Key West sandbar">
+                <img src="8_hour-800.webp" alt="Key West sandbar">
             </div>
             <div class="gallery-item">
-                <img src="mel.jpg" alt="Guest enjoying the crystal clear water">
+                <img src="mel-800.webp" alt="Guest enjoying the crystal clear water">
             </div>
             <div class="gallery-item">
-                <img src="lobdter.jpg" alt="Florida Keys lobster">
+                <img src="lobdter-800.webp" alt="Florida Keys lobster">
             </div>
             <div class="gallery-item">
-                <img src="fish.jpg" alt="Underwater reef fish">
+                <img src="fish-800.webp" alt="Underwater reef fish">
             </div>
             <div class="gallery-item">
-                <img src="mel_water.jpg" alt="Snorkeling in Key West">
+                <img src="mel_water-800.webp" alt="Snorkeling in Key West">
             </div>
             <div class="gallery-item">
-                <img src="drone_jew.jpg" alt="Aerial view of Key West waters">
+                <img src="drone_jew-800.webp" alt="Aerial view of Key West waters">
             </div>
         </div>
         
@@ -2340,7 +2340,7 @@
     <!-- Game Section -->
     <section class="game-section" id="game">
         <div class="game-background">
-            <img src="game-promo.png" alt="Captain Dane's Deep 6 Video Game">
+            <img src="game-promo-800.webp" alt="Captain Dane's Deep 6 Video Game">
         </div>
         <div class="game-overlay"></div>
         <div class="game-content">
@@ -2365,31 +2365,31 @@
         <!-- Instagram Grid - Real photos -->
         <div class="instagram-grid">
             <div class="instagram-item">
-                <img src="shark_drone_2.jpg" alt="Shark drone shot">
+                <img src="shark_drone_2-800.webp" alt="Shark drone shot">
             </div>
             <div class="instagram-item">
-                <img src="ST_half_day.jpeg" alt="Captain Dane at sandbar">
+                <img src="ST_half_day-800.webp" alt="Captain Dane at sandbar">
             </div>
             <div class="instagram-item">
-                <img src="85C06349-850E-4082-9BF5-85EA8053CFF4.jpeg" alt="Floating in water">
+                <img src="85C06349-850E-4082-9BF5-85EA8053CFF4-800.webp" alt="Floating in water">
             </div>
             <div class="instagram-item">
-                <img src="dane_drone.jpg" alt="Drone shot">
+                <img src="dane_drone-800.webp" alt="Drone shot">
             </div>
             <div class="instagram-item">
-                <img src="lobdter.jpg" alt="Lobster">
+                <img src="lobdter-800.webp" alt="Lobster">
             </div>
             <div class="instagram-item">
-                <img src="mel.jpg" alt="Guest enjoying">
+                <img src="mel-800.webp" alt="Guest enjoying">
             </div>
             <div class="instagram-item">
-                <img src="fish.jpg" alt="Reef fish">
+                <img src="fish-800.webp" alt="Reef fish">
             </div>
             <div class="instagram-item">
-                <img src="sharks_drone.jpg" alt="Sharks">
+                <img src="sharks_drone-800.webp" alt="Sharks">
             </div>
             <div class="instagram-item">
-                <img src="8_hour.jpeg" alt="Sandbar">
+                <img src="8_hour-800.webp" alt="Sandbar">
             </div>
         </div>
         
@@ -2696,8 +2696,23 @@
             }
         }
         
-        // Try on load
-        tryPlayVideo();
+        // s65: videos (1.8 MB + 1 MB) only load on desktop, after first paint.
+        // Phones get the poster image; mobile LCP was 17.8 s with autoplay video.
+        const wantsVideo = window.matchMedia('(min-width: 769px)').matches
+            && !(navigator.connection && navigator.connection.saveData);
+        function attachAndPlay(v) {
+            if (!v || v.querySelector('source')) return;
+            const s = document.createElement('source'); s.src = v.dataset.src; s.type = 'video/mp4';
+            v.appendChild(s); v.load();
+        }
+        if (wantsVideo) {
+            const go = () => { attachAndPlay(heroVideo); tryPlayVideo();
+                document.querySelectorAll('video.lazy-video').forEach(v => { attachAndPlay(v); v.play().catch(() => {}); }); };
+            if (document.readyState === 'complete') go(); else window.addEventListener('load', go, { once: true });
+        } else if (heroVideo) {
+            heroVideo.style.display = 'none';
+            if (heroFallback) heroFallback.style.display = 'block';
+        }
         
         // Also try on user interaction (Android often requires this)
         document.addEventListener('touchstart', tryPlayVideo, { once: true });
