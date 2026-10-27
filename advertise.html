@@ -70,7 +70,7 @@
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 1rem;
-        }
+        overflow-wrap: anywhere; }
         .advertise-hero p {
             font-size: 1.2rem;
             max-width: 720px;
@@ -209,7 +209,8 @@
         }
         footer a { color: var(--primary); text-decoration: none; }
         footer a:hover { text-decoration: underline; }
-    </style>
+            @media (max-width: 767px) { .advertise-hero h1 { font-size: 1.75rem; } .advertise-hero { padding-top: 2.5rem; } }
+</style>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Q1H6GCM71"></script>
@@ -231,7 +232,7 @@
 
     <section class="advertise-hero">
         <div class="container">
-            <h1>Sponsor WalkThePlankAdventures.com</h1>
+            <h1>Sponsor Walk&nbsp;The&nbsp;Plank Adventures</h1>
             <p>Reach Key West travelers planning sandbar charters, bachelorette trips, and luxury yacht days.</p>
         </div>
     </section>
