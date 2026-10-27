@@ -427,6 +427,12 @@
             background: #ff7043;
         }
 
+        /* Mobile: the centred nav overlapped the header CTA at <768px. Hide nav (links live in hero + footer), keep a compact CTA. */
+        @media (max-width: 767px) {
+            .header-nav { display: none !important; }
+            .header-cta { font-size: 0.8rem; padding: 0.55rem 0.9rem; white-space: nowrap; }
+        }
+
         @media (min-width: 768px) {
             .site-header {
                 padding: 1rem 2rem;
@@ -2009,7 +2015,7 @@
         <a href="index.html" class="header-logo">
             <img src="logo.png" alt="Walk The Plank Adventures" width="583" height="202">
         </a>
-        <nav style="display: flex; gap: 2rem; align-items: center; position: absolute; left: 50%; transform: translateX(-50%); font-family: 'Oswald', sans-serif;">
+        <nav class="header-nav" style="display: flex; gap: 2rem; align-items: center; position: absolute; left: 50%; transform: translateX(-50%); font-family: 'Oswald', sans-serif;">
             <a href="index.html#book-dane" style="color: #333; text-decoration: none; font-weight: 600;">Charter</a>
             <a href="blog/" style="color: #333; text-decoration: none; font-weight: 600;">Blog</a>
         </nav>
@@ -2055,11 +2061,6 @@
             </div>
         </div>
         
-        <!-- Mobile scroll indicator -->
-        <div class="scroll-indicator">
-            <span>Check Availability</span>
-            <svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>
-        </div>
     </section>
 
     <!-- Sponsor slot: hero leaderboard -->
